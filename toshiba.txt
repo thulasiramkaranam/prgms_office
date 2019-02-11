@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/Toshiba_960main_Global.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="Toshiba" />
+<meta name="description" content="Toshiba" />
+
+<link rel="start" href="http://www.toshiba.co.jp/index.htm" />
+<link rel="copyright" href="http://www.toshiba.co.jp/c_right/index.htm" />
+
+<link rel="stylesheet" type="text/css" href="../../../css/2013/import_global.css" media="all" />
+<script type="text/javascript" src="../../../jvs/2011b/mjl.js"></script>
+<script type="text/javascript" src="../../../jvs/2011b/jquery-1.6.4.min.js"></script>
+
+<script type="text/javascript" src="../../../jvs/2013/e_gnav.js"></script>
+
+
+<script type="text/javascript" src="../../../jvs/2013/e_gfooter.js"></script>
+
+<script type="text/javascript" src="../../../jvs/2013/e_linkoff.js"></script>
+
+<script type="text/javascript" src="../../../jvs/2013/analytics.js"></script>
+
+<script type="text/javascript" src="../../../jvs/2013/run.js"></script>
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Toshiba : News and Topics (September, 2018)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<link href="../css/press_en.css" rel="stylesheet" />
+<script type="text/javascript" src="../jvs/jquery.cookie.js" ></script>
+<script type="text/javascript" src="../jvs/main_en.js" ></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="withLmenu" type="boolean" value="true" -->
+<!-- InstanceParam name="withGlobal" type="boolean" value="false" -->
+<!-- InstanceParam name="withJapanese" type="boolean" value="true" -->
+<!-- InstanceParam name="withSitemap" type="boolean" value="false" -->
+<!-- InstanceParam name="withSearch" type="boolean" value="false" -->
+<!-- InstanceParam name="withGmenu" type="boolean" value="true" -->
+<!-- InstanceParam name="withFmenu" type="boolean" value="true" -->
+<!-- InstanceParam name="withGA" type="boolean" value="true" -->
+<!-- InstanceParam name="withFavicon" type="boolean" value="false" -->
+<!-- InstanceParam name="keyword" type="text" value="Toshiba" -->
+<!-- InstanceParam name="description" type="text" value="Toshiba" -->
+<!-- InstanceParam name="inqhref" type="text" value="/contact/index.htm" -->
+<!-- InstanceParam name="maphref" type="text" value="/contents/index_about.htm" -->
+<!-- InstanceParam name="rblockCl" type="text" value="mt3" -->
+<!-- InstanceParam name="jphref" type="text" value="index_j.htm" -->
+<!-- InstanceParam name="wwhref" type="text" value="/worldwide/index.html" -->
+
+</head>
+<body>
+
+<div id="gHeader">
+<div id="logo"><a href="http://www.toshiba.co.jp/worldwide/index.html" title="Toshiba Top Page"><img src="../../../img/common/head/logo_l.gif" alt="Toshiba" width="161" height="64" /></a><a href="#mainContents" class="jumpContents">go to text</a></div>
+<p id="identifier"><img src="../../../img/2013/globaltop/site_id_global.gif" alt="Global" width="43" height="17" /></p>
+
+<div id="gHeaderRightBlock" class="mt3">
+
+<ul class="list-region-switch text11">
+<!-- InstanceBeginEditable name="otherLang" -->
+<!-- InstanceEndEditable -->
+
+<li><a href="../index_j.htm">Japanese</a></li>
+
+
+</ul>
+
+
+<ul class="list-utility">
+
+
+<li class="contact"><a href="/contact/index.htm">Contact Us</a></li>
+</ul>
+
+
+
+
+</div>
+</div>
+
+
+<div id="gMenu" class="clear">
+<ul class="mainMenu">
+<li class="region"><a href="../../../worldwide/region/index.html">Select Region</a></li>
+<li class="eProd"><a href="../../../product/index.htm">Products &amp; Services</a></li>
+<li class="eSust"><a href="../../../csr/en/index.htm">Sustainability</a></li>
+<li class="eAbout"><a href="../../index.htm">About TOSHIBA</a></li>
+</ul>
+
+</div>
+
+
+<!-- InstanceBeginEditable name="otherMenu" -->
+<!-- InstanceEndEditable -->
+
+<div id="mainContents" class="bgShadow pt10"><!-- InstanceBeginEditable name="contents" -->
+<div class="container">
+<div class="gn12 mb10">
+<p class="breadcrumbs text11"><a href="../../../worldwide/index.html">Home</a> &gt;<a href="../index.htm">News and Topics</a> &gt; <a href="../date.htm">Search by Month</a> &gt; September, 2018 News and Topics</p></p>
+</div>
+
+<div class="gw12 mb20">
+<h1 class="h-1 swHd"><span>News and Topics</span></h1>
+</div>
+
+<div class="conts720 mb30">
+<div class="gn12 selectBox mb15">
+    <script type="text/javascript" src="../jvs/selectMonth.js" charset="utf-8"></script>
+</div>
+<div class="gn12 title_block news_and_topics mb20">
+<h2 class="h-2r"><span>September, 2018 News and Topics</span></h2>
+</div>
+
+<div class="gn12 newsIndex mb20">
+
+
+    <dl class="rssGroup">
+        <dt class="rssDate">28 Sep, 2018
+          <ul>
+            <li><a href="../t0067.htm">Strategies, Measures</a></li>
+ 
+            <li><a href="../t0098.htm">Energy</a></li>
+ </ul></dt>
+        <dd class="press"><a href="https://www.toshiba-energy.com/en/info/info2018_0928.htm" class="rssItem">Toshibaâs Survey Project of Hydrogen Energy System Selected by METI </a> (Toshiba Energy Systems &amp; Solutions Corporation)</dd>
+    </dl>
+
+
+
+    <dl class="rssGroup">
+        <dt class="rssDate">27 Sep, 2018
+          <ul></ul></dt>
+        <dd class="press"><a href="http://www.toshiba.co.jp/about/ir/en/news/20180927_1.pdf" class="rssItem">Update on the Split Off of Power and Industrial Systems Research and Development Center to Wholly Owned Subsidiaries </a></dd>
+    </dl>
+
+
+
+    <dl class="rssGroup">
+        <dt class="rssDate">26 Sep, 2018
+          <ul>
+            <li><a href="../t0100.htm">Electronic Devices</a></li>
+ 
+            <li><a href="../t0071.htm">New products & services</a></li>
+ </ul></dt>
+        <dd class="non-press"><a href="https://toshiba.semicon-storage.com/ap-en/company/news/news-topics/2018/09/linear-20180926-1.html" class="rssItem">Toshiba Releases DC Brushed Motor Driver IC with Current Limiter Detection </a> (Toshiba Electronic Devices &amp; Storage Corporation)</dd>
+    </dl>
+
+    <dl class="rssGroup">
+        <dt class="rssDate">26 Sep, 2018
+          <ul>
+            <li><a href="../t0067.htm">Strategies, Measures</a></li>
+ 
+            <li><a href="../t0103.htm">Digital Solutions</a></li>
+ </ul></dt>
+        <dd class="press"><a href="pr2602.htm" class="rssItem">Taro Shimada to Join Toshiba to Strengthen Digital Transformation and Business Expansion </a></dd>
+    </dl>
+
+    <dl class="rssGroup">
+        <dt class="rssDate">26 Sep, 2018
+          <ul>
+            <li><a href="../t0099.htm">Social Infrastructure</a></li>
+ 
+            <li><a href="../t0079.htm">Exhibitions and presentations</a></li>
+ </ul></dt>
+        <dd class="press"><a href="https://www.toshiba.co.jp/cs/en/topics/back-number/20180926.htm" class="rssItem">Toshiba to Showcase Robotic Logistics System at POST-EXPO 2018 </a> (Toshiba Infrastructure Systems &amp; Solutions Corporation)</dd>
+    </dl>
+
+    <dl class="rssGroup">
+        <dt class="rssDate">26 Sep, 2018
+          <ul></ul></dt>
+        <dd class="press"><a href="pr2601.htm" class="rssItem">Toshiba Announces New Global Brand Identity, The "Essence of Toshiba" </a></dd>
+    </dl>
+
+
+
+    <dl class="rssGroup">
+        <dt class="rssDate">25 Sep, 2018
+          <ul>
+            <li><a href="../t0100.htm">Electronic Devices</a></li>
+ 
+            <li><a href="../t0071.htm">New products & services</a></li>
+ </ul></dt>
+        <dd class="non-press"><a href="https://toshiba.semicon-storage.com/ap-en/company/news/news-topics/2018/09/automotive-20180925-1.html" class="rssItem">Toshiba Launches Power Amplifier for Car Audio with Strong Resistance to Power Surges </a> (Toshiba Electronic Devices &amp; Storage Corporation)</dd>
+    </dl>
+
+
+
+    <dl class="rssGroup">
+        <dt class="rssDate">12 Sep, 2018
+          <ul>
+            <li><a href="../t0099.htm">Social Infrastructure</a></li>
+ 
+            <li><a href="../t0078.htm">Awards</a></li>
+ </ul></dt>
+        <dd class="press"><a href="https://www.toshiba.co.jp/cs/en/topics/back-number/20180912.htm" class="rssItem">Toshibaâs Lithium-ion Battery System is the Worldâs First Recognized as Compliant with European Norm Safety Standards for Rolling Stock  </a> (Toshiba Infrastructure Systems &amp; Solutions Corporation)</dd>
+    </dl>
+
+
+
+    <dl class="rssGroup">
+        <dt class="rssDate">11 Sep, 2018
+          <ul>
+            <li><a href="../t0070.htm">R&D, Technology</a></li>
+ </ul></dt>
+        <dd class="press"><a href="pr1101.htm" class="rssItem">High-speed quantum cryptographic communications with key distribution speeds exceeding 10 Mbps in a real-world environment </a></dd>
+    </dl>
+
+
+</div>
+</div>
+<div class="gn4">
+  <ul class="sideMenu doAct mb15">
+    <li class="st bgGr"><span class="noLink">News and Topics</span>
+      <ul>
+        <li class="bgWh"><a href="../index.htm">Latest Releases</a></li>
+        <li class="bgWh"><a href="../date.htm">Search by Month</a></li>
+        <li class="bgWh"><a href="../cate.htm">Search by Category</a></li>
+        <li class="bgWh"><a href="../corp.htm">Search by Company</a></li>
+        <li class="bgWh"><a href="../region.htm">Search by Area and Country</a></li>
+      </ul></li>
+  </ul>
+<div id="releaseFormArea">
+<div class="sidePRsearchbox">
+<form method="get" action="http://news-search.toshiba.co.jp/bizasp/index.php">
+<fieldset>
+<label for="releases-search">Search in News and Topics</label>
+<input id="releases-search" name="q" type="text" value="" maxlength="140" />
+<input type="image" id="SUBMIT-BUTTON" class="form-button" src="../module2011/img/2011b/common/head/btn-search_e.gif" alt="Search" value="Search" />
+<input type="hidden" name="corpId" value="atc130025" id="bizsearchAspCorpId">
+<input type="hidden" name="en" value="">
+<input type="hidden" name="layout" value="">
+<input type="hidden" name="hits" value="">
+<input type="hidden" name="t[]" value="1">
+</fieldset>
+</form>
+</div>
+</div><!-- /#releaseFormArea -->
+</div>
+<div class="container mb10">
+  <p class="gn6 text11"><a href="../index.htm" class="hmS">News and Topics</a></p>
+  <p class="gn6 tr text11"><a href="#gHeader" class="hmS2">To Top</a></p>
+</div>
+</div>
+<!-- InstanceEndEditable -->
+</div>
+
+<!-- InstanceBeginEditable name="otherFooterMenu" -->
+<!-- InstanceEndEditable -->
+
+
+<div id="ftSitemap">
+<div class="container pb30 pt30">
+<ul class="text11 doAct">
+<li class="gn3"><a href="/worldwide/region/index.html"><img src="/img/2013/globaltop/ico_sr.png" width="20" height="19" alt="" class="fr" />Select Region</a></li>
+<li class="gn3"><a href="/product/index.htm" class="subT">Products &amp; Services</a></li>
+<li class="gn3"><a href="../../../csr/en/index.htm">Sustainability</a></li>
+<li class="gn3"><a href="/about/index.htm">About TOSHIBA</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="gfooter">
+<div class="container w960 pt4">
+<ul class="list-utility ml10">
+<li><a href="../../../worldwide/index.html">Top page</a></li>
+<li class="ml5"><a href="../../../terms/index.htm">Terms and Conditions</a></li>
+<li class="last-child ml5"><a href="../../../privacy/index.htm">Privacy Policy</a></li>
+</ul>
+<div class="block-copyright mr10">
+<address class="copyright"><a href="../../../c_right/index.htm"><img src="../../../img/2011b/common/foot/foot_copy.gif" alt="Copyright" width="348" height="23" /></a></address>
+</div>
+</div>
+</div>
+
+</body>
+<!-- InstanceEnd --></html>

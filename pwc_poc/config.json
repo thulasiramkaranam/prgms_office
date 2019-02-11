@@ -1,0 +1,6 @@
+
+{
+    "api_key": "559f97a41d574b989609df347b5adfa8",
+    "url": "https://newsapi.org/v2/top-headlines?",
+    "sources": ["bbc-news", "cnn", "the-washington-post", "the-new-york-times", "reuters"]
+}

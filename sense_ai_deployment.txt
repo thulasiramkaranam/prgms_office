@@ -1,0 +1,14 @@
+
+
+1) After installation nginx
+2) go to nginx.conf and give the index.html file location in ec2
+3)previously it worked on port 9021
+4) use chown to give root permissions on folder
+
+Way I instlled on my linux
+
+1) Install nginx
+2) create a NAT gateway in VPC for subnet and map to the ec2 instance
+3) sudo service nginx start ---> will lead to seeing the nginx base page on public ip in internet
+4) go to etc/nginx/nginx.conf to update the root for where the code is
+5) restart nginx and it will launch the application

@@ -1,0 +1,119 @@
+
+Naming styles:
+
+1) Avoid using name variables that are part of python API
+  eg1) use user_id = 34 instead of id=45, use main_ instead of main=[1,2,3]
+	use class_ = {'1':'34'} instead of class
+
+2) Avoid using single character variables like 
+  eg) use city = 'Bengaluru' instead of i = 'Bengaluru'
+3) Avoid using Capital letters with underscores while naming variables eg: 'Capital_City'.
+   instead stick to snake case like eg: 'capital_city' or camel case like 'capitalCity'
+4) packages, modules, functions, methods and variables can be declared in 'lowercase_with_underscore' eg: 'student_marks'
+5) Constants can be declared in the format 'ALL_CAPS_WITH_UNDERSCORE' eg: 'DISCOUNT_PERCENTAGE=50'
+6) Protected methods and internal functions as '_single_leading_underscore(self,)' eg: '_calculate_total(self)'
+7) Private methods with '__double_leading_underscore(self,)' eg: '__sum(self)'
+
+Indentation and spacing:
+
+1) limit a single line in code to 79 or max 100 characters and use back slash'\' for continuation in another line
+2) Sorround functions with atleast single(min) or double(max) blank lines
+3) Each function should have doc string at the beginning to explicitly mention what exactly the function will do
+	eg: def query_table():
+		"""
+		 1)this function queries the table
+		 2)do some transformations on the data
+		 3)returns the output
+		"""
+		#lines of code		
+
+Other Recommendations:
+
+1) In the entire piece of code avoid using both single and double quotes like eg: test=['x', "xyz", 'y']
+   instead use test = ["x", "xyz", "y"]
+2) use 'is' and 'is not' on boolean variables 
+   eg: use 'print (1) if ab is True else 3' 
+       instead of 'print (1) if ab == True else 3'	
+3) Line break when binary operators are used 
+   eg: Use 
+	total = (type1
+		 + type2
+		 + type3) 
+	instead of
+	total = (type1 +
+		 type2 +
+		 type3)
+
+4) Avoid white spaces in the following spaces
+   * Immediately inside parentheses, brackets or braces.
+	No: ab = {'ab': [ 1 ]}
+	yes: ab = {'ab': [1]}
+   * Between a trailing comma and a following close parenthesis.
+	No: ab = (1, )
+	yes: ab = (1,)
+   * More than one space around an assignment (or other) operator to align it with another.
+	No: ab                 = 23
+	yes: ab = 23
+   * Immediately before the open parenthesis that starts an indexing or slicing:
+	No: index = listt  [3]
+	yes: index = listt[3]
+
+5) Object type comparisons should always use isinstance() instead of comparing types directly
+
+   Yes: if isinstance(obj, int):
+   No:  if type(obj) is type(1):
+
+6) There should be no space before the colon
+   Yes=> code: int = 34
+   No=>  code : int = 34  or code:int = 34
+
+7) Use 'string'.startswith() and 'string'.endswith() instead of string slicing to check for prefixes or suffixes
+   Yes=> booln = "computer".startswith("com")
+   No==> if ce[:3] == "com"
+Comments:
+
+1) Always update the comments in code.  Comments can contradict the code if not updated and leads to serious problems
+   and confusions in future.
+2) Use inline comments sparingly and start them by giving atleast two to four spaces after the statement declaration
+    No: x=x+1#incrementing the variable by 1
+    Yes: x=x+1   #Incrementing the variable by 1
+	
+Python Files:
+
+1) It is always preferable to work on files with 'with' statement.  Files opened with 'with' statement automatically 
+   closes it.
+   eg: when 'with' is used
+	with open('output.txt', 'w') as file:  
+
+    		file.write('Hi there!') # file will automatically close when we exit the with loop
+   eg: when 'with' is not used
+	f = open("abcd.txt", "w")
+        f.write("thulasiram")
+	f.close()    # We should use close() statement here 
+
+Python Import statements:
+
+1) Imports should be always on saperate lines
+    Yes: import os
+         import sys
+    No: import os, sys, datetime
+    things like 'from datetime import datetime as dtt' are exceptions
+2) Imports should be grouped in the following order:
+
+	*standard library imports
+	*related third party imports
+	*local application/library specific imports
+   You should put a blank line between each group of imports.
+3) Module level "dunders" (i.e. names with two leading and two trailing underscores) 
+   such as __all__, __author__, __version__, should be placed before the import statements except
+   'from __future__imports'
+   eg:  from __future__ import barry_as_FLUFL
+
+	__all__ = ['a', 'b', 'c']
+	__version__ = '0.1'
+	__author__ = 'Cardinal Biggles'
+
+	import os
+	import sys
+
+Python in AWS Lambda Best practices:

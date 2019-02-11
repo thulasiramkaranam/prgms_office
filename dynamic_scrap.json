@@ -1,0 +1,22 @@
+
+
+
+{
+ 
+    "https://www.thehindu.com/news/national": {
+
+        "base_website": "https://www.thehindu.com/news/national/",
+        "page_link": "?page={0}",
+        "selenium": false
+
+    },
+
+    "https://indianexpress.com/section/india/": {
+
+        "base_website": "https://www.thehindu.com/news/national/",
+        "page_link": "?page={0}",
+        "selenium": false
+    }
+
+
+}

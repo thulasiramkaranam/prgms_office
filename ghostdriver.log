@@ -1,0 +1,119 @@
+[INFO  - 2018-10-23T07:58:51.076Z] GhostDriver - Main - running on port 63327
+[INFO  - 2018-10-23T07:58:55.507Z] Session [7d45b1e0-d699-11e8-bcc2-cf68ecfe496a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-10-23T07:58:55.508Z] Session [7d45b1e0-d699-11e8-bcc2-cf68ecfe496a] - page.customHeaders:  - {}
+[INFO  - 2018-10-23T07:58:55.508Z] Session [7d45b1e0-d699-11e8-bcc2-cf68ecfe496a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-10-23T07:58:55.508Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7d45b1e0-d699-11e8-bcc2-cf68ecfe496a
+[ERROR - 2018-10-23T07:59:01.422Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281541254
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:03.650Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281543567
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:04.736Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281544698
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:05.826Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281545753
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:07.145Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281547079
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:08.476Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281548450
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:09.839Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281549813
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:11.198Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281551168
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:13.024Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search [INFO  - 2018-10-23T08:03:13.162Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:08:13.162Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:13:13.163Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:18:13.172Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:23:13.173Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:28:13.184Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:33:13.188Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:38:13.201Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:43:13.201Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:48:13.200Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:53:13.201Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T08:58:13.201Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:03:13.201Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:08:13.201Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:13:13.202Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:18:13.202Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:23:13.216Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:28:13.217Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:33:13.226Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:38:13.231Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:43:13.238Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:48:13.248Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:53:13.263Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T09:58:13.263Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:03:13.276Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:08:13.278Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:13:13.279Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:18:13.300Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:23:13.310Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:28:13.310Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:33:13.323Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:38:13.324Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-10-23T10:43:13.324Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+cator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281587270
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:48.650Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281588614
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:49.974Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281589947
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:51.308Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281591276
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:52.773Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281592727
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:54.131Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281594098
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:55.464Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281595424
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:56.846Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281596753
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T07:59:58.235Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281598209
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:00.034Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281599957
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:01.777Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281601708
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:03.138Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281603103
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:04.415Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281604393
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:05.761Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281605722
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:07.269Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281607226
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:08.605Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281608576
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:10.185Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281609972
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:11.889Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281611791
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-10-23T08:00:13.225Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1540281613192
+
+  phantomjs://platform/console++.js:263 in error
