@@ -1,0 +1,513 @@
+{"websites" :["https://www.metalbulletin.com/SearchResults.aspx#?term=copper&onlyCurrent&filters=%7B%22categories%22:%5B%22Copper%22%5D%7D","https://agmetalminer.com/search/lme+copper/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+copper","https://www.metalbulletin.com/SearchResults.aspx#?term=aluminum&onlyCurrent&filters=%7B%22categories%22:%5B%22Aluminium%22%5D%7D","https://agmetalminer.com/search/lme+aluminum/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=aluminum","https://www.metalbulletin.com/SearchResults.aspx#?term=nickel&onlyCurrent&filters=%7B%22categories%22:%5B%22Nickel%22%5D%7D","https://agmetalminer.com/search/lme+nickel/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+nickel","https://www.metalbulletin.com/SearchResults.aspx#?term=zinc&onlyCurrent&filters=%7B%22categories%22:%5B%22Zinc%22%5D%7D","https://agmetalminer.com/search/lme+zinc/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+zinc","https://www.metalbulletin.com/SearchResults.aspx#?term=lead&onlyCurrent&filters=%7B%22categories%22:%5B%22Lead%22%5D%7D","https://agmetalminer.com/search/lme+lead/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+lead","https://www.metalbulletin.com/SearchResults.aspx#?term=Tin&onlyCurrent&filters=%7B%22categories%22:%5B%22Tin%22%5D%7D","https://agmetalminer.com/search/lme+tin/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+tin","https://www.metalbulletin.com/SearchResults.aspx#?term=steel&filters=%7B%22keywords%22:%5B%22steel%22%5D%7D","https://www.hellenicshippingnews.com/category/commodities/chinese-iron-ore-and-steelmaking-prices/","https://agmetalminer.com/?s=shanghai+steel/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.metalbulletin.com/SearchResults.aspx#?term=china%20Iron%20ore&filters=%7B%22categories%22:%5B%22Iron%20Ore%22%5D%7D","https://www.reuters.com/search/news?blob=iron+ore&sortBy=date&dateRange=all","https://www.hellenicshippingnews.com/category/commodities/chinese-iron-ore-and-steelmaking-prices/","https://agmetalminer.com/?s=china+iron+ore/?st-facet-field=category&st-facet-term=4&order_by=date","https://www.metalbulletin.com/SearchResults.aspx#?term=coking%20coal&onlyCurrent&filters=%7B%22categories%22:%5B%22Coking%20Coal%22%5D%7D","https://www.hellenicshippingnews.com/category/commodities/","https://agmetalminer.com/search/coking+coal/?st-facet-field=category&st-facet-term=4&order_by=date","http://www.mining.com/search/news/newkeywhat/coking%20coal/","http://www.kitcosilver.com/","https://www.metalbulletin.com/SearchResults.aspx#?term=silver&onlyCurrent&filters=%7B%22categories%22:%5B%22Silver%22%5D%7D","https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=silver","https://www.kitco.com/search/?q=platinum","https://www.metalbulletin.com/SearchResults.aspx#?term=platinum&filters=%7B%22categories%22:%5B%22Platinum%22%5D%7D","https://www.reuters.com/search/news?blob=platinum&sortBy=date&dateRange=all","https://www.dailyfx.com/search#q=CNY","https://www.fxstreet.com/analysis/latest?q=USD%2FCNY&hPP=15&idx=FxsIndexPro&p=0","https://www.cnbc.com/search/?query=USD%2FCNY&qsearchterm=USD/CNY","https://www.dailyfx.com/search#q=GBP","https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=GBPUSD","https://www.cnbc.com/search/?query=GBP%2FUSD&qsearchterm=GBP/USD","https://www.dailyfx.com/search#q=EUR","https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=EURUSD","https://www.cnbc.com/search/?query=EUR%2FUSD&qsearchterm=EUR/USD","https://www.dailyfx.com/search#q=JPY","https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=USDJPY","https://www.cnbc.com/search/?query=USD%252FJPY&qsearchterm=USD%2FJPY","https://oilprice.com/Energy/Oil-Prices","https://www.reuters.com/search/news?blob=wti+oil&sortBy=date&dateRange=pastDay","https://oilprice.com/Energy/Oil-Prices","https://www.reuters.com/search/news?sortBy=date&dateRange=pastDay&blob=brent+oil","https://oilprice.com/Energy/Natural-Gas","https://www.reuters.com/search/news?blob=natural+gas&sortBy=date&dateRange=pastDay","https://www.lngworldnews.com/category/regional-news/americas/","https://www.reuters.com/search/news?sortBy=date&dateRange=pastDay&blob=LNG","http://www.mining.com/search/news/newkeywhat/thermal%20coal/","http://www.mining.com/search/news/newkeywhat/spodumene/","https://www.icis.com/explore/?s=benzene","https://www.polyestertime.com/","https://www.icis.com/explore/?s=Ethylene","https://www.polyestertime.com/","https://www.icis.com/explore/?s=styrene","https://www.polyestertime.com/","https://www.icis.com/explore/?s=polypropylene","https://www.polyestertime.com/","https://in.reuters.com/search/news?blob=naphtha&sortBy=date&dateRange=all","https://www.icis.com/explore/?s=naphtha","https://www.reuters.com/search/news?sortBy=&dateRange=&blob=wheat","https://www.farmprogress.com/crops/wheat","https://www.agriculture.com/crops/wheat","https://www.reuters.com/search/news?blob=corn","https://www.agriculture.com/crops/corn","https://www.farmprogress.com/crops/corn","https://www.farmprogress.com/crops/corn"],
+
+"https://www.metalbulletin.com/SearchResults.aspx#?term=copper&onlyCurrent&filters=%7B%22categories%22:%5B%22Copper%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=copper&onlyCurrent&filters=%7B%22categories%22:%5B%22Copper%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/search/lme+copper/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/search/lme+copper/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+copper": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+copper"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=aluminum&onlyCurrent&filters=%7B%22categories%22:%5B%22Aluminium%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=aluminum&onlyCurrent&filters=%7B%22categories%22:%5B%22Aluminium%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/search/lme+aluminum/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/search/lme+aluminum/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=aluminum": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=aluminum"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=nickel&onlyCurrent&filters=%7B%22categories%22:%5B%22Nickel%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=nickel&onlyCurrent&filters=%7B%22categories%22:%5B%22Nickel%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/search/lme+nickel/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/search/lme+nickel/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+nickel": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+nickel"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=zinc&onlyCurrent&filters=%7B%22categories%22:%5B%22Zinc%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=zinc&onlyCurrent&filters=%7B%22categories%22:%5B%22Zinc%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/search/lme+zinc/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/search/lme+zinc/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+zinc": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+zinc"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=lead&onlyCurrent&filters=%7B%22categories%22:%5B%22Lead%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=lead&onlyCurrent&filters=%7B%22categories%22:%5B%22Lead%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/search/lme+lead/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/search/lme+lead/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+lead": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+lead"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=Tin&onlyCurrent&filters=%7B%22categories%22:%5B%22Tin%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=Tin&onlyCurrent&filters=%7B%22categories%22:%5B%22Tin%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/search/lme+tin/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/search/lme+tin/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+tin": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=lme+tin"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=steel&filters=%7B%22keywords%22:%5B%22steel%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=steel&filters=%7B%22keywords%22:%5B%22steel%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.hellenicshippingnews.com/category/commodities/chinese-iron-ore-and-steelmaking-prices/": {"base_website":  "https://www.hellenicshippingnews.com",
+"base_website_for_newpage":  "https://www.hellenicshippingnews.com/category/commodities/chinese-iron-ore-and-steelmaking-prices/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/?s=shanghai+steel/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/?s=shanghai+steel/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=china%20Iron%20ore&filters=%7B%22categories%22:%5B%22Iron%20Ore%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=china%20Iron%20ore&filters=%7B%22categories%22:%5B%22Iron%20Ore%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?blob=iron+ore&sortBy=date&dateRange=all": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?blob=iron+ore&sortBy=date&dateRange=all"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.hellenicshippingnews.com/category/commodities/chinese-iron-ore-and-steelmaking-prices/": {"base_website":  "https://www.hellenicshippingnews.com",
+"base_website_for_newpage":  "https://www.hellenicshippingnews.com/category/commodities/chinese-iron-ore-and-steelmaking-prices/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/?s=china+iron+ore/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/?s=china+iron+ore/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=coking%20coal&onlyCurrent&filters=%7B%22categories%22:%5B%22Coking%20Coal%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=coking%20coal&onlyCurrent&filters=%7B%22categories%22:%5B%22Coking%20Coal%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.hellenicshippingnews.com/category/commodities/": {"base_website":  "https://www.hellenicshippingnews.com",
+"base_website_for_newpage":  "https://www.hellenicshippingnews.com/category/commodities/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://agmetalminer.com/search/coking+coal/?st-facet-field=category&st-facet-term=4&order_by=date": {"base_website":  "https://agmetalminer.com",
+"base_website_for_newpage":  "https://agmetalminer.com/search/coking+coal/?st-facet-field=category&st-facet-term=4&order_by=date"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"http://www.mining.com/search/news/newkeywhat/coking%20coal/": {"base_website":  "https://www.mining.com",
+"base_website_for_newpage":  "http://www.mining.com/search/news/newkeywhat/coking%20coal/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"http://www.kitcosilver.com/": {"base_website":  "https://www.kitcosilver.com",
+"base_website_for_newpage":  "http://www.kitcosilver.com/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=silver&onlyCurrent&filters=%7B%22categories%22:%5B%22Silver%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=silver&onlyCurrent&filters=%7B%22categories%22:%5B%22Silver%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=silver": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=all&blob=silver"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.kitco.com/search/?q=platinum": {"base_website":  "https://www.kitco.com",
+"base_website_for_newpage":  "https://www.kitco.com/search/?q=platinum"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.metalbulletin.com/SearchResults.aspx#?term=platinum&filters=%7B%22categories%22:%5B%22Platinum%22%5D%7D": {"base_website":  "https://www.metalbulletin.com",
+"base_website_for_newpage":  "https://www.metalbulletin.com/SearchResults.aspx#?term=platinum&filters=%7B%22categories%22:%5B%22Platinum%22%5D%7D"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?blob=platinum&sortBy=date&dateRange=all": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?blob=platinum&sortBy=date&dateRange=all"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.dailyfx.com/search#q=CNY": {"base_website":  "https://www.dailyfx.com",
+"base_website_for_newpage":  "https://www.dailyfx.com/search#q=CNY"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.fxstreet.com/analysis/latest?q=USD%2FCNY&hPP=15&idx=FxsIndexPro&p=0": {"base_website":  "https://www.fxstreet.com",
+"base_website_for_newpage":  "https://www.fxstreet.com/analysis/latest?q=USD%2FCNY&hPP=15&idx=FxsIndexPro&p=0"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.cnbc.com/search/?query=USD%2FCNY&qsearchterm=USD/CNY": {"base_website":  "https://www.cnbc.com",
+"base_website_for_newpage":  "https://www.cnbc.com/search/?query=USD%2FCNY&qsearchterm=USD/CNY"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.dailyfx.com/search#q=GBP": {"base_website":  "https://www.dailyfx.com",
+"base_website_for_newpage":  "https://www.dailyfx.com/search#q=GBP"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=GBPUSD": {"base_website":  "https://www.fxstreet.com",
+"base_website_for_newpage":  "https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=GBPUSD"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.cnbc.com/search/?query=GBP%2FUSD&qsearchterm=GBP/USD": {"base_website":  "https://www.cnbc.com",
+"base_website_for_newpage":  "https://www.cnbc.com/search/?query=GBP%2FUSD&qsearchterm=GBP/USD"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.dailyfx.com/search#q=EUR": {"base_website":  "https://www.dailyfx.com",
+"base_website_for_newpage":  "https://www.dailyfx.com/search#q=EUR"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=EURUSD": {"base_website":  "https://www.fxstreet.com",
+"base_website_for_newpage":  "https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=EURUSD"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.cnbc.com/search/?query=EUR%2FUSD&qsearchterm=EUR/USD": {"base_website":  "https://www.cnbc.com",
+"base_website_for_newpage":  "https://www.cnbc.com/search/?query=EUR%2FUSD&qsearchterm=EUR/USD"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.dailyfx.com/search#q=JPY": {"base_website":  "https://www.dailyfx.com",
+"base_website_for_newpage":  "https://www.dailyfx.com/search#q=JPY"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=USDJPY": {"base_website":  "https://www.fxstreet.com",
+"base_website_for_newpage":  "https://www.fxstreet.com/news/latest?dFR%5BCategory%5D%5B0%5D=News&dFR%5BTags%5D%5B0%5D=USDJPY"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.cnbc.com/search/?query=USD%252FJPY&qsearchterm=USD%2FJPY": {"base_website":  "https://www.cnbc.com",
+"base_website_for_newpage":  "https://www.cnbc.com/search/?query=USD%252FJPY&qsearchterm=USD%2FJPY"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://oilprice.com/Energy/Oil-Prices": {"base_website":  "https://oilprice.com",
+"base_website_for_newpage":  "https://oilprice.com/Energy/Oil-Prices"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?blob=wti+oil&sortBy=date&dateRange=pastDay": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?blob=wti+oil&sortBy=date&dateRange=pastDay"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://oilprice.com/Energy/Oil-Prices": {"base_website":  "https://oilprice.com",
+"base_website_for_newpage":  "https://oilprice.com/Energy/Oil-Prices"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=pastDay&blob=brent+oil": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=pastDay&blob=brent+oil"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://oilprice.com/Energy/Natural-Gas": {"base_website":  "https://oilprice.com",
+"base_website_for_newpage":  "https://oilprice.com/Energy/Natural-Gas"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?blob=natural+gas&sortBy=date&dateRange=pastDay": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?blob=natural+gas&sortBy=date&dateRange=pastDay"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.lngworldnews.com/category/regional-news/americas/": {"base_website":  "https://www.lngworldnews.com",
+"base_website_for_newpage":  "https://www.lngworldnews.com/category/regional-news/americas/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=date&dateRange=pastDay&blob=LNG": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=date&dateRange=pastDay&blob=LNG"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"http://www.mining.com/search/news/newkeywhat/thermal%20coal/": {"base_website":  "https://www.mining.com",
+"base_website_for_newpage":  "http://www.mining.com/search/news/newkeywhat/thermal%20coal/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"http://www.mining.com/search/news/newkeywhat/spodumene/": {"base_website":  "https://www.mining.com",
+"base_website_for_newpage":  "http://www.mining.com/search/news/newkeywhat/spodumene/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.icis.com/explore/?s=benzene": {"base_website":  "https://www.icis.com",
+"base_website_for_newpage":  "https://www.icis.com/explore/?s=benzene"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.polyestertime.com/": {"base_website":  "https://www.polyestertime.com",
+"base_website_for_newpage":  "https://www.polyestertime.com/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.icis.com/explore/?s=Ethylene": {"base_website":  "https://www.icis.com",
+"base_website_for_newpage":  "https://www.icis.com/explore/?s=Ethylene"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.polyestertime.com/": {"base_website":  "https://www.polyestertime.com",
+"base_website_for_newpage":  "https://www.polyestertime.com/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.icis.com/explore/?s=styrene": {"base_website":  "https://www.icis.com",
+"base_website_for_newpage":  "https://www.icis.com/explore/?s=styrene"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.polyestertime.com/": {"base_website":  "https://www.polyestertime.com",
+"base_website_for_newpage":  "https://www.polyestertime.com/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.icis.com/explore/?s=polypropylene": {"base_website":  "https://www.icis.com",
+"base_website_for_newpage":  "https://www.icis.com/explore/?s=polypropylene"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.polyestertime.com/": {"base_website":  "https://www.polyestertime.com",
+"base_website_for_newpage":  "https://www.polyestertime.com/"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://in.reuters.com/search/news?blob=naphtha&sortBy=date&dateRange=all": {"base_website":  "https://in.reuters.com",
+"base_website_for_newpage":  "https://in.reuters.com/search/news?blob=naphtha&sortBy=date&dateRange=all"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.icis.com/explore/?s=naphtha": {"base_website":  "https://www.icis.com",
+"base_website_for_newpage":  "https://www.icis.com/explore/?s=naphtha"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?sortBy=&dateRange=&blob=wheat": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?sortBy=&dateRange=&blob=wheat"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.farmprogress.com/crops/wheat": {"base_website":  "https://www.farmprogress.com",
+"base_website_for_newpage":  "https://www.farmprogress.com/crops/wheat"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.agriculture.com/crops/wheat": {"base_website":  "https://www.agriculture.com",
+"base_website_for_newpage":  "https://www.agriculture.com/crops/wheat"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.reuters.com/search/news?blob=corn": {"base_website":  "https://www.reuters.com",
+"base_website_for_newpage":  "https://www.reuters.com/search/news?blob=corn"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.agriculture.com/crops/corn": {"base_website":  "https://www.agriculture.com",
+"base_website_for_newpage":  "https://www.agriculture.com/crops/corn"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},
+"https://www.farmprogress.com/crops/corn": {"base_website":  "https://www.farmprogress.com",
+"base_website_for_newpage":  "https://www.farmprogress.com/crops/corn"
+,"page_link":false,
+"selenium": false,
+"website_type": "EO",
+"sublink": true
+},

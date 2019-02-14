@@ -4,7 +4,7 @@ import psycopg2
 import pandas as pd
 import unidecode
 def make_conn():
-    df = pd.read_excel(r'C:\Users\thulasiram.k\Documents\latlongtill20732to21232.xlsx')
+    df = pd.read_excel(r'C:\Users\thulasiram.k\Documents\lat_long.xlsx')
     db_name = 'senseai'
     db_user = 'neo_app_vso_root'
     db_host = 'neo-app-vso.c8yss8lfzn7r.us-east-1.rds.amazonaws.com'
@@ -35,24 +35,24 @@ def make_conn():
      
     for i in range(len(df)):
         row = df.iloc[i]
-        if i > 20730 and i <=21230:
-            if i == 21732 or i == 21230: 
+        if i > 19730 and i <=20223:
+            if i == 19730 or i == 20223: 
                 print(row)
-            if row['lat-long'] != 'Unable to fetch recheck city name':
-                city_name = unidecode.unidecode(row['name'].strip())
-                country = unidecode.unidecode(row['country'].strip())
-                if type(row['subcountry']) != float:
-                    sub_country = unidecode.unidecode(row['subcountry'].strip())
-                else:
-                    sub_country = 'None'
-                lat_long = row['lat-long'].strip()
-                lat_long = lat_long.replace("'", '"')
-                lat_long = lat_long.replace(" ", "")
-                lat_long = json.loads(lat_long)
-                lat_long = json.dumps(lat_long)
-                print("in the final")
-                cursor.execute(query, (city_name.lower(),sub_country.lower(),country.lower(),lat_long))
-                
+        if row['lat-long'] != 'Unable to fetch recheck city name':
+            city_name = unidecode.unidecode(row['name'].strip())
+            country = unidecode.unidecode(row['country'].strip())
+            if type(row['subcountry']) != float:
+                sub_country = unidecode.unidecode(row['subcountry'].strip())
+            else:
+                sub_country = 'None'
+            lat_long = row['lat-long'].strip()
+            lat_long = lat_long.replace("'", '"')
+            lat_long = lat_long.replace(" ", "")
+            lat_long = json.loads(lat_long)
+            lat_long = json.dumps(lat_long)
+            print("in the final")
+            cursor.execute(query, (city_name.lower(),sub_country.lower(),country.lower(),lat_long))
+            
             
     conn.commit()
     cursor.close()

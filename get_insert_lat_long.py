@@ -50,22 +50,29 @@ def get_pgsql_connection():
 def get_lat_long(input):
     try:
         city_name = input['city_name']
-        sub_country = input['sub_country'] if 'sub_country' in input else None
+        sub_country = input['sub_country']
         country = input['country']
         conn_select = get_pgsql_connection()
         cursor_select = conn_select.cursor()
-        if sub_country is not None:
+        if city_name != 'none':
+            print("inside first select query")
+            query = "select * from senseai_lat_long where city_name = %s and sub_country=%s and country=%s"
+            cursor_select.execute(query, (city_name.lower(),sub_country.lower(),country.lower()))
+        elif city_name == 'none' and (sub_country != 'none' or country != 'none'):
+            print("second select query")
             query = "select * from senseai_lat_long where city_name = %s and sub_country=%s and country=%s"
             cursor_select.execute(query, (city_name.lower(),sub_country.lower(),country.lower()))
         else:
-            query = "select * from senseai_lat_long where city_name = %s and country=%s"
-            cursor_select.execute(query, (city_name.lower(),country.lower()))
+            return "if city is given subcountry and country are mandatory, only subcountry and country can also be given"
         result = cursor_select.fetchone()
         if result is None:
-            if sub_country is not None:
+            if city_name != 'none' and sub_country != 'none' and country != 'none':
                 search_string = city_name+" "+sub_country+ " "+country
-            else:
-                search_string = city_name+" "+country  
+            elif (sub_country != 'none' or country != 'none') and city_name == 'none':
+                if sub_country == 'none':
+                    search_string = country  
+                else:
+                    search_string = sub_country
             lat_long = scrap_new_location(search_string)
             if lat_long is None:
                 return "Latitude and Longitude not found"
@@ -92,6 +99,8 @@ def insert_lat_long(city_name, sub_country, country, lat_long):
         lat_long = json.dumps(lat_long)
         if sub_country is None:
             sub_country = 'none'
+        else:
+            sub_country = unidecode.unidecode(sub_country.strip().lower())
 
         
         cursor_insert.execute(query, (city_name,sub_country,country,lat_long))        
@@ -103,9 +112,11 @@ def insert_lat_long(city_name, sub_country, country, lat_long):
         print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
 
 
-#input = {'city_name': 'zzdghdkd','sub_country': 'andhra pradesh', 'country': 'india'}
-input2 = {'city_name': 'goa', 'country': 'india'}
-result = get_lat_long(input2)
+#input = {'city_name': 'arlington','sub_country': 'washington', 'country': 'united states'}
+input = {'city_name': 'nellore','sub_country': 'Andhra pradesh', 'country': 'india'}
+{'city_name': 'none','sub_country': 'Andhra pradesh', 'country': 'none'}
+#input2 = {'city_name': 'goa', 'country': 'india'}
+result = get_lat_long(input)
 print(result)
 print("After result")
 
