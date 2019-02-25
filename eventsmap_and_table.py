@@ -36,6 +36,7 @@ def lambda_handler(event, context):
                 }        
                     )
             booln = False
+            
         
         else:
             response = dynamodb_table.query(
@@ -48,6 +49,8 @@ def lambda_handler(event, context):
                     ":b": to_time
                 }
             )
+            logger.info(response)
+            logger.info("After response")
             
     except Exception as e:
         print("In the exception of insert lat long")
@@ -60,25 +63,63 @@ def lambda_handler(event, context):
         raise Exception(json.dumps(dictt))
     
     if booln is False:
-        
+        table_data = []
         for i in response['Items']:
+            
+            table_data_dictt = {}
+            table_data_location = ""
+            print(i)
+            print("After i")
             for j in i['impacted_locations']['L']:
+                
                 dictt = {}
+                if 'NULL' not in j['M']['city']:
+                    location = j['M']['city']['S']
+                elif 'NULL' not in j['M']['state']:
+                    location = j['M']['state']['S']
+                else:
+                    location = j['M']['Country']['S']
+                table_data_location += location+", "
                 dictt.update({'lat': float(j['M']['lat_long']['M']['lat']['S']), 'lng': float(j['M']['lat_long']['M']['long']['S']),
-                  'Location': j['M']['city']['S'], 'type': i['class1']['S'], 'Summary': i['summary']['S']})
+                  'Location': location, 'type': i['class1']['S'], 'Summary': i['summary']['S']})
                 
                 output['markers'].append(dictt) 
+            table_data_dictt.update({'event_Id': i['event_id']['S'],"event_desc":i["summary"]['S'], "severity": i["severity"]['S'],
+                                  "location": table_data_location.rstrip(), 
+                                  "impacted_entities":i['entities_impacted']['N'],"keywords": ", ".join(key['S'] for key in i['tags']['L'])
+            })
+            
+            table_data.append(table_data_dictt)
+        output.update({'table_data': table_data})
         return output
     else:
         print(response)
+        table_data = []
         for i in response['Items']:
             
+            table_data_dictt = {}
+            table_data_location = ""
             for j in i['impacted_locations']:
                 dictt = {}
-                dictt.update({'lat':float(j['lat_long']['lat']), 'lng': float(j['lat_long']['long']),'Location': j['city'],
+                print(j)
+                print("After j")
+                if j['city'] is not None:
+                    location = j['city']
+                elif j['state'] is not None:
+                    location = j['state']
+                else:
+                    location = j['Country']
+                table_data_location += location+", "
+                dictt.update({'lat':float(j['lat_long']['lat']), 'lng': float(j['lat_long']['long']),'Location': location,
                       'type': i['class1'] ,'Summary': i['summary']})
                 
                 output['markers'].append(dictt)   
+            table_data_dictt.update({'event_Id': i['event_id'],"event_desc":i["summary"], "severity": i["severity"],
+                                  "location": table_data_location.rstrip(), 
+                                  "impacted_entities":i['entities_impacted'],"keywords": ", ".join(key for key in i['tags'])
+            })
+            table_data.append(table_data_dictt)
+        output.update({'table_data': table_data})
         return output
                      
    

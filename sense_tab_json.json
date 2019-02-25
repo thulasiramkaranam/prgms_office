@@ -1,0 +1,57 @@
+{
+    "markers": [
+        {
+            "lat": -33.8688,
+            "lng": 151.2093,
+            "Location": "sydney",
+            "type": "flood",
+            "Summary": "floods maroon australia"
+        },
+        {
+            "lat": -31.9505,
+            "lng": 115.8605,
+            "Location": "perth",
+            "type": "flood",
+            "Summary": "floods maroon australia"
+        },
+        {
+            "lat": -37.8136,
+            "lng": 144.9631,
+            "Location": "melbourne",
+            "type": "flood",
+            "Summary": "floods maroon australia"
+        }
+    ],
+    "table_data": [
+            {
+                "event_Id": "1",
+                "event_desc": "Hydrogen",
+                "severity": "1.0079",
+                "location": "H",
+                "impacted_entities": "NW",
+                "keywords": "Tags And Rags"
+            },
+            {
+                "event_Id": "2",
+                "event_desc": "Helium",
+                "severity": "4.0026",
+                "location": "He",
+                "impacted_entities": "NW",
+                "keywords": "Tag, Rohit, Thulasi"
+            }
+    ],
+    "page_header":[
+        {
+            "total_event": 3,
+            "critical_events":2,
+            "most_impacted_region": "West Coast"
+            "MS_region_lat": 4.9209384
+            "MS_region_lng": 1.092348
+        }
+    ]
+    // If columns become dynamic in future
+    "table_columns": [
+        "col1": "Event ID",
+        "col2": "Event Description"
+    ]
+}
