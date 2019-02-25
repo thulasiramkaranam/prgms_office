@@ -113,8 +113,8 @@ def insert_lat_long(city_name, sub_country, country, lat_long):
 
 
 #input = {'city_name': 'arlington','sub_country': 'washington', 'country': 'united states'}
-input = {'city_name': 'nellore','sub_country': 'Andhra pradesh', 'country': 'india'}
-{'city_name': 'none','sub_country': 'Andhra pradesh', 'country': 'none'}
+input = {'city_name': 'Beijing','sub_country': 'beijing', 'country': 'china'}
+
 #input2 = {'city_name': 'goa', 'country': 'india'}
 result = get_lat_long(input)
 print(result)
