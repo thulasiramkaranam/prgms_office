@@ -1,11 +1,10 @@
-
 import json
 import boto3
 def lambda_handler(event, context):
     # TODO implement
     table = boto3.client('dynamodb', region_name='us-east-1')
     response = table.scan(
-        TableName='neo_app_sense_location_match_events',
+        TableName='neo_app_sense_event_master',
         AttributesToGet=[
         'class1',
         ])

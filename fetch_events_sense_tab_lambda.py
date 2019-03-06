@@ -57,10 +57,17 @@ def lambda_handler(event, context):
         print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
     output = {'markers': []}
     if response['Count'] == 0:
-        dictt = {'status': 404,
-                  
-                 'message': "No data available"}
-        raise Exception(json.dumps(dictt))
+        dictt = {
+                        "markers": [
+                           
+                        ],
+                        "table_data": [
+                        
+                        ]
+                    } 
+ 
+
+        return dictt
     
     if booln is False:
         table_data = []
@@ -79,17 +86,23 @@ def lambda_handler(event, context):
                     location = j['M']['state']['S']
                 else:
                     location = j['M']['Country']['S']
-                table_data_location += location+", "
-                dictt.update({'lat': float(j['M']['lat_long']['M']['lat']['S']), 'lng': float(j['M']['lat_long']['M']['long']['S']),
-                  'Location': location, 'type': i['class1']['S'], 'Summary': i['summary']['S']})
+                if location != 'none':
+                    table_data_location += location+", "
+                    dictt.update({'lat': float(j['M']['lat_long']['M']['lat']['S']), 'lng': float(j['M']['lat_long']['M']['long']['S']),
+                      'Location': location, 'type': i['class1']['S'], "severity": i["severity"]['S'],'Summary': i['headline']['S']})
                 
-                output['markers'].append(dictt) 
-            table_data_dictt.update({'event_Id': i['event_id']['S'],"event_desc":i["summary"]['S'], "severity": i["severity"]['S'],
+                    output['markers'].append(dictt) 
+            if len(table_data_location) > 0:
+                
+                table_data_dictt.update({'event_Id': i['event_id']['S'],"event_desc":i["summary"]['S'], "severity": i["severity"]['S'],
                                   "location": table_data_location.rstrip(), 
-                                  "impacted_entities":i['entities_impacted']['N'],"keywords": ", ".join(key['S'] for key in i['tags']['L'])
-            })
+                                  "headline": i['headline']['S'],
+                                   "event_date": i['event_date']['S'],
+                                   "keywords": ", ".join(key['S'].replace("'",'').lstrip() for key in i['tags']['L'])
+                                  
+                    })
             
-            table_data.append(table_data_dictt)
+                table_data.append(table_data_dictt)
         output.update({'table_data': table_data})
         return output
     else:
@@ -109,16 +122,21 @@ def lambda_handler(event, context):
                     location = j['state']
                 else:
                     location = j['Country']
-                table_data_location += location+", "
-                dictt.update({'lat':float(j['lat_long']['lat']), 'lng': float(j['lat_long']['long']),'Location': location,
-                      'type': i['class1'] ,'Summary': i['summary']})
+                if location != 'none':
+                    table_data_location += location+", "
+                    dictt.update({'lat':float(j['lat_long']['lat']), 'lng': float(j['lat_long']['long']),'Location': location,
+                      'type': i['class1'] , "severity": i["severity"], 'Summary': i['headline']})
                 
-                output['markers'].append(dictt)   
-            table_data_dictt.update({'event_Id': i['event_id'],"event_desc":i["summary"], "severity": i["severity"],
+                    output['markers'].append(dictt) 
+            if len(table_data_location) > 0:
+                table_data_dictt.update({'event_Id': i['event_id'],"event_desc":i["summary"], "severity": i["severity"],
+                                   "headline": i['headline'],
+                                   "event_date": i['event_date'],
                                   "location": table_data_location.rstrip(), 
-                                  "impacted_entities":i['entities_impacted'],"keywords": ", ".join(key for key in i['tags'])
-            })
-            table_data.append(table_data_dictt)
+                                  
+                                  "keywords": ", ".join(key.replace("'",'').lstrip() for key in i['tags'])
+                    })
+                table_data.append(table_data_dictt)
         output.update({'table_data': table_data})
         return output
                      
