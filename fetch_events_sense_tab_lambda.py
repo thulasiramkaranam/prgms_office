@@ -12,12 +12,48 @@ logger.setLevel(logging.INFO)
 
 #client = boto3.client('dynamodb')
 
+def transform(data,typ):
+    if typ == 'lat':
+        if 'S' in data:
+            splt = data.split('.')
+            splt = splt[0]+'.'+splt[1][:3]
+            
+            lat = -1 * float(splt)
+            return lat
+        elif 'N' in data:
+            
+            splt = data.split('.')
+            splt = splt[0]+'.'+splt[1][:3]
+            print(splt)
+            lat = 1 * float(splt)
+            return lat
+            
+        else:
+            return float(data)
+        
+    else:
+        if 'W' in data:
+            splt = data.split('.')
+            splt = splt[0]+'.'+splt[1][:3]
+            
+            lng = -1 * float(splt)
+            return lng
+            
+        elif 'E' in data:
+            splt = data.split('.')
+            splt = splt[0]+'.'+splt[1][:3]
+            
+            lng = 1 * float(splt)
+            return lng
+        else:
+            return float(data)
+
 def lambda_handler(event, context):
     # TODO implement
     booln = True
     try:
         dynamodb = boto3.resource('dynamodb')
-        dynamodb_table = dynamodb.Table('neo_app_sense_location_match_evnts')
+        dynamodb_table = dynamodb.Table('neo_app_sense_event_master')
     
      
         # converting to epoch time    
@@ -27,7 +63,7 @@ def lambda_handler(event, context):
             
             table = boto3.client('dynamodb', region_name='us-east-1')
             response = table.scan(
-            TableName='neo_app_sense_location_match_evnts',
+            TableName='neo_app_sense_event_master',
             
             FilterExpression='epoch_time BETWEEN :a and :b',
             ExpressionAttributeValues = {
@@ -40,8 +76,8 @@ def lambda_handler(event, context):
         
         else:
             response = dynamodb_table.query(
-                IndexName='class1-index',
-                KeyConditionExpression=Key('class1').eq(event['event_type']),
+                IndexName='class2-index',
+                KeyConditionExpression=Key('class2').eq(event['event_type']),
                 
                 FilterExpression='epoch_time BETWEEN :a and :b',
                 ExpressionAttributeValues = {
@@ -86,10 +122,10 @@ def lambda_handler(event, context):
                     location = j['M']['state']['S']
                 else:
                     location = j['M']['Country']['S']
-                if location != 'none':
+                if location != 'none' and i['class2']['S'].lower().strip() != 'default':
                     table_data_location += location+", "
-                    dictt.update({'lat': float(j['M']['lat_long']['M']['lat']['S']), 'lng': float(j['M']['lat_long']['M']['long']['S']),
-                      'Location': location, 'type': i['class1']['S'], "severity": i["severity"]['S'],'Summary': i['headline']['S']})
+                    dictt.update({'lat': transform(j['M']['lat_long']['M']['lat']['S'], 'lat'), 'lng': transform(j['M']['lat_long']['M']['long']['S'], 'lng'),
+                      'Location': location, 'type': i['class2']['S'], "severity": i["severity"]['S'],'Summary': i['headline']['S']})
                 
                     output['markers'].append(dictt) 
             if len(table_data_location) > 0:
@@ -116,16 +152,18 @@ def lambda_handler(event, context):
                 dictt = {}
                 print(j)
                 print("After j")
-                if j['city'] is not None:
+                if 'NULL' not in j['city'] and 'none' not in j['city']:
                     location = j['city']
-                elif j['state'] is not None:
+                elif 'NULL' not in j['state'] and 'none' not in j['state']:
                     location = j['state']
                 else:
                     location = j['Country']
+                print(location)
+                print("After location")
                 if location != 'none':
                     table_data_location += location+", "
-                    dictt.update({'lat':float(j['lat_long']['lat']), 'lng': float(j['lat_long']['long']),'Location': location,
-                      'type': i['class1'] , "severity": i["severity"], 'Summary': i['headline']})
+                    dictt.update({'lat':transform(j['lat_long']['lat'], 'lat'), 'lng': transform(j['lat_long']['long'], 'lng'),'Location': location,
+                      'type': i['class2'] , "severity": i["severity"], 'Summary': i['headline']})
                 
                     output['markers'].append(dictt) 
             if len(table_data_location) > 0:
