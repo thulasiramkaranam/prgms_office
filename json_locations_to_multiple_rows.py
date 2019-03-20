@@ -4,8 +4,6 @@ import pandas as pd
 import json
 import ast
 import copy
-old_df = pd.read_excel(r"C:\Users\thulasiram.k\Documents\test2.xlsx")
-loca_df = pd.read_excel(r"C:\Users\thulasiram.k\prgms_office\tes3.xlsx") 
 
 
 def fetch_list_frm_string(liststring):
@@ -84,5 +82,4 @@ def loc_match_fmt_to_ds_fmt(loc_df):
     loc_df.to_excel("final3.xlsx")
 
 
-loc_match_fmt_to_ds_fmt(loca_df)
 #ds_fmt_to_loc_match_fmt(old_df)       

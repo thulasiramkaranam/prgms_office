@@ -1,20 +1,23 @@
 
+
+
+
+
 {
-
-"data": [
-    {"website_name": "https://thehindu.com/national",
-    "base_website": "https://thehindu.com",
-    "sublink": false,
-    "project_code": "EO-454", 
-    "project_name": "EO", 
-    "requestor": "thulasi@bcone.com"},
-    {"website_name": "https://agmetalminer.com/copper",
-        "base_website": "https://agmetalminer.com",
-        "sublink": true,
-        "project_code": "EO-4343", 
-        "project_name": "Corning", 
-        "requestor": "aman@bcone.com"}
-
-]
-
-}
+    "data": {
+        "email": ["thulasiram.k@bcone.com", "raj.k@bcone.com"],
+        "start_date": "2019-03-20T12:34:23",
+        "requestor": "thulasiram.k@bcone.com",
+        "description": "alert configuration for eo project", 
+        "project_code": "EO-999",
+        "definition": "test definition",
+        "sources": "EO-999",
+        "event_attributes": "default",
+        "comparator": "equals",
+        "expression_type": "string"
+        }
+        
+    
+    
+    
+    }
