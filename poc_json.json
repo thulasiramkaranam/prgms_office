@@ -14,10 +14,8 @@
         "sources": "EO-999",
         "event_attributes": "default",
         "comparator": "equals",
-        "expression_type": "string"
+        "expression_type": "string",
+        "values": ["copper", "natural gas"]
         }
         
-    
-    
-    
     }

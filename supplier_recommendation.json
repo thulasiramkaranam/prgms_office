@@ -1,0 +1,83 @@
+
+
+{
+    "impactedsupplier1": [
+
+        {
+            "supplier_id": "345",
+            "supplier_name": "uniliver",
+            "item_no": "ITEM-345",
+            "Item_description": "test description"
+
+        },
+        {
+            "supplier_id": "444",
+            "supplier_name": "godrej",
+            "item_no": "ITEM-444",
+            "Item_description": "test description"
+
+        },
+
+        {
+            "supplier_id": "555",
+            "supplier_name": "mahindra",
+            "item_no": "ITEM-555",
+            "Item_description": "test description"
+
+        }
+
+        ],
+        "impactedsupplier2": [
+
+            {
+                "supplier_id": "111",
+                "supplier_name": "p&g",
+                "item_no": "ITEM-111",
+                "Item_description": "111 description"
+    
+            },
+            {
+                "supplier_id": "222",
+                "supplier_name": "wipro",
+                "item_no": "ITEM-222",
+                "Item_description": "222 description"
+    
+            },
+    
+            {
+                "supplier_id": "666",
+                "supplier_name": "jhonson",
+                "item_no": "ITEM-666",
+                "Item_description": "666 description"
+    
+            }
+    
+            ],
+            "impactedsupplier3": [
+
+                {
+                    "supplier_id": "999",
+                    "supplier_name": "l&t",
+                    "item_no": "ITEM-999",
+                    "Item_description": "999 description"
+        
+                },
+                {
+                    "supplier_id": "898",
+                    "supplier_name": "diversey",
+                    "item_no": "ITEM-898",
+                    "Item_description": "898 description"
+        
+                },
+        
+                {
+                    "supplier_id": "798",
+                    "supplier_name": "motorolla",
+                    "item_no": "ITEM-798",
+                    "Item_description": "798 description"
+        
+                }
+        
+                ]
+    
+}
