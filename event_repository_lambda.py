@@ -1,5 +1,3 @@
-
-
 import json
 import boto3
 import logging
@@ -10,7 +8,7 @@ def lambda_handler(event, context):
     output = []
     table = boto3.client('dynamodb', region_name='us-east-1')
     response = table.scan(
-            TableName='neo_app_sense_event_master',
+            TableName='neo_app_sense_evnt_master',
                    
                     )
     rows = response['Items']
@@ -25,11 +23,13 @@ def lambda_handler(event, context):
                 word = " ".join(re.findall("[a-zA-Z]+", tag['S']))
                 if len(word) > 3:
                     counter += 1
+                    word = word.capitalize()
                     tags = tags + word + ','
                 if counter == 5:
                     break
         else:
             tags = 'no tags available'
+        tags = tags.rstrip(",")
         table_data_location = ""
         for j in row['impacted_locations']['L']:
                 
@@ -41,9 +41,11 @@ def lambda_handler(event, context):
                 location = j['M']['Country']['S']
             if location != 'none':
                 table_data_location += location+","
-        if len(table_data_location) > 0: 
+        if len(table_data_location) > 0 and row['class2']['S'].lower().strip() != 'default': 
+            table_data_location =table_data_location.rstrip(",")
+            
             dictt.update({"event_Id": row['event_id']['S'],
-                   "event_Type": row['class1']['S'],
+                   "event_Type": row['class2']['S'],
                    "severity": row['severity']['S'],
                     "headline": row['headline']['S'],
                     "summary": row['summary']['S'],

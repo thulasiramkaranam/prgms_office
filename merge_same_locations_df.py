@@ -3,7 +3,8 @@
 
 import json
 import pandas as pd
-df = pd.read_excel(r"C:\Users\thulasiram.k\Downloads\2019-03-13refresh.xlsx")
+df = pd.read_excel(r'C:\Users\thulasiram.k\prgms_office\test.xlsx', encoding='utf-8') 
+print(len(df))
 def merge_locations(df):
         
     unique_rows = df['Scrape_id'].unique()
@@ -18,8 +19,11 @@ def merge_locations(df):
             impacted_locations.append(dictt)
         
         df.loc[df['Scrape_id'] == i, 'Impacted_locations'] = json.dumps(impacted_locations)
+        df = df.drop_duplicates('Scrape_id', keep='last')
+        
     return df
 output = merge_locations(df)
-output.to_excel("testing.xlsx")
+output = output.drop(columns=['city_name', 'sub_country', 'country', 'Latitude', 'Longitude'])
+output.to_excel("mvp_merged.xlsx")
 
  

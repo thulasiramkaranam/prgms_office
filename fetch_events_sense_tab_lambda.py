@@ -53,7 +53,7 @@ def lambda_handler(event, context):
     booln = True
     try:
         dynamodb = boto3.resource('dynamodb')
-        dynamodb_table = dynamodb.Table('neo_app_sense_event_master')
+        dynamodb_table = dynamodb.Table('neo_app_sense_evnt_master')
     
      
         # converting to epoch time    
@@ -63,9 +63,9 @@ def lambda_handler(event, context):
             
             table = boto3.client('dynamodb', region_name='us-east-1')
             response = table.scan(
-            TableName='neo_app_sense_event_master',
+            TableName='neo_app_sense_evnt_master',
             
-            FilterExpression='epoch_time BETWEEN :a and :b',
+            FilterExpression='event_epoch_time BETWEEN :a and :b',
             ExpressionAttributeValues = {
                     ":a": {'N': str(from_time)},
                     ":b": {'N': str(to_time)}
@@ -76,10 +76,10 @@ def lambda_handler(event, context):
         
         else:
             response = dynamodb_table.query(
-                IndexName='class2-index',
-                KeyConditionExpression=Key('class2').eq(event['event_type']),
+                IndexName='class1-index',
+                KeyConditionExpression=Key('class1').eq(event['event_type']),
                 
-                FilterExpression='epoch_time BETWEEN :a and :b',
+                FilterExpression='event_epoch_time BETWEEN :a and :b',
                 ExpressionAttributeValues = {
                     ":a": from_time,
                     ":b": to_time
@@ -107,12 +107,14 @@ def lambda_handler(event, context):
     
     if booln is False:
         table_data = []
+        print(len(response['Items']))
+        print("After length")
         for i in response['Items']:
+            
             
             table_data_dictt = {}
             table_data_location = ""
-            print(i)
-            print("After i")
+            
             for j in i['impacted_locations']['L']:
                 
                 dictt = {}
@@ -122,19 +124,21 @@ def lambda_handler(event, context):
                     location = j['M']['state']['S']
                 else:
                     location = j['M']['Country']['S']
-                if location != 'none' and i['class2']['S'].lower().strip() != 'default':
+                
+                
+                if location != 'none' and i['class1']['S'].lower().strip() != 'default':
                     table_data_location += location+", "
                     dictt.update({'lat': transform(j['M']['lat_long']['M']['lat']['S'], 'lat'), 'lng': transform(j['M']['lat_long']['M']['long']['S'], 'lng'),
-                      'Location': location, 'type': i['class2']['S'], "severity": i["severity"]['S'],'Summary': i['headline']['S']})
-                
+                      'Location': location, 'type': i['class1']['S'], "severity": i["severity"]['S'],'Event Id': i['event_id']['S']})
+                    
                     output['markers'].append(dictt) 
             if len(table_data_location) > 0:
-                
-                table_data_dictt.update({'event_Id': i['event_id']['S'],"event_desc":i["summary"]['S'], "severity": i["severity"]['S'],
+                table_data_location = table_data_location.rstrip(', ')
+                table_data_dictt.update({'Event Id': i['event_id']['S'],"summary":i["summary"]['S'], "severity": i["severity"]['S'],
                                   "location": table_data_location.rstrip(), 
                                   "headline": i['headline']['S'],
-                                   "event_date": i['event_date']['S'],
-                                   "keywords": ", ".join(key['S'].replace("'",'').lstrip() for key in i['tags']['L'])
+                                   "event_date": i['event_date']['S'][:19],
+                                   "keywords": ", ".join(key['S'].replace("'",'').lstrip().capitalize() for key in i['tags']['L'])
                                   
                     })
             
@@ -163,16 +167,17 @@ def lambda_handler(event, context):
                 if location != 'none':
                     table_data_location += location+", "
                     dictt.update({'lat':transform(j['lat_long']['lat'], 'lat'), 'lng': transform(j['lat_long']['long'], 'lng'),'Location': location,
-                      'type': i['class2'] , "severity": i["severity"], 'Summary': i['headline']})
+                      'type': i['class1'] , "severity": i["severity"],'Event Id': i['event_id']})
                 
                     output['markers'].append(dictt) 
             if len(table_data_location) > 0:
-                table_data_dictt.update({'event_Id': i['event_id'],"event_desc":i["summary"], "severity": i["severity"],
+                table_data_location = table_data_location.rstrip(', ')
+                table_data_dictt.update({'Event Id': i['event_id'],"summary":i["summary"], "severity": i["severity"],
                                    "headline": i['headline'],
-                                   "event_date": i['event_date'],
+                                   "event_date": i['event_date'][:19],
                                   "location": table_data_location.rstrip(), 
                                   
-                                  "keywords": ", ".join(key.replace("'",'').lstrip() for key in i['tags'])
+                                  "keywords": ", ".join(key.replace("'",'').lstrip().capitalize() for key in i['tags'])
                     })
                 table_data.append(table_data_dictt)
         output.update({'table_data': table_data})
