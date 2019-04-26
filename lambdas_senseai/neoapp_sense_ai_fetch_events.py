@@ -1,9 +1,13 @@
 
 
 
+
+
+
 import json
 import boto3
 import sys
+import os
 import logging
 import datetime
 from datetime import datetime as dtt
@@ -54,20 +58,18 @@ def lambda_handler(event, context):
     booln = True
     try:
         dynamodb = boto3.resource('dynamodb')
-        dynamodb_table = dynamodb.Table('neo_app_sense_event_master')
-        dynamodb_table_location = dynamodb.Table('neo_app_sense_location_match_evnts')
+        dynamodb_table = dynamodb.Table(os.environ['table_name'])
     
      
         # converting to epoch time    
         from_time = int((dtt.strptime(event['from_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())
         to_time = int((dtt.strptime(event['to_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())
         scanned_output = []
-        scanned_output_location = []
         if event['event_type'].lower() == 'all':
             
-            table = boto3.client('dynamodb', region_name='us-east-1')
+            table = boto3.client('dynamodb', region_name=os.environ['table_region'])
             response = table.scan(
-            TableName='neo_app_sense_event_master',
+            TableName= os.environ['table_name'],
             
             FilterExpression='event_epoch_time BETWEEN :a and :b',
             ExpressionAttributeValues = {
@@ -81,7 +83,7 @@ def lambda_handler(event, context):
             while 'LastEvaluatedKey' in response:
                 logger.info("in the while loop")
                 response = table.scan(
-                    TableName='neo_app_sense_event_master',
+                    TableName= os.environ['table_name'],
             
                     FilterExpression='event_epoch_time BETWEEN :a and :b',
                     ExpressionAttributeValues = {
@@ -92,43 +94,13 @@ def lambda_handler(event, context):
                     )
                 scanned_output.extend(response['Items'])
                 
-            # for location    
-            
-            table = boto3.client('dynamodb', region_name='us-east-1')
-            response = table.scan(
-            TableName='neo_app_sense_location_match_evnts',
-            
-            FilterExpression='event_epoch_time BETWEEN :a and :b',
-            ExpressionAttributeValues = {
-                    ":a": {'N': str(from_time)},
-                    ":b": {'N': str(to_time)}
-                }        
-                    )
-            logger.info(response)
-            logger.info("after response")
-            scanned_output_location.extend(response['Items'])
-            while 'LastEvaluatedKey' in response:
-                logger.info("in the while loop")
-                response = table.scan(
-                    TableName='neo_app_sense_location_match_evnts',
-            
-                    FilterExpression='event_epoch_time BETWEEN :a and :b',
-                    ExpressionAttributeValues = {
-                    ":a": {'N': str(from_time)},
-                    ":b": {'N': str(to_time)}
-                    },
-                    ExclusiveStartKey= response['LastEvaluatedKey'] 
-                    )
-                scanned_output_location.extend(response['Items'])
-            
-                
          
             booln = False
             
         
         else:
             query_output = []
-            query_output_location = []
+            
             response = dynamodb_table.query(
                 IndexName='class1-index',
                 KeyConditionExpression=Key('class1').eq(event['event_type']),
@@ -153,35 +125,8 @@ def lambda_handler(event, context):
                     ExclusiveStartKey= response['LastEvaluatedKey'] 
                 )
                 query_output.extend(response['Items'])
-                
-            # For location
-            
-            response = dynamodb_table_location.query(
-                IndexName='class1-index',
-                KeyConditionExpression=Key('class1').eq(event['event_type']),
-                
-                FilterExpression='event_epoch_time BETWEEN :a and :b',
-                ExpressionAttributeValues = {
-                    ":a": from_time,
-                    ":b": to_time
-                }
-                    )
-            query_output_location.extend(response['Items'])
-            while 'LastEvaluatedKey' in response:
-                response = dynamodb_table.query(
-                    IndexName='class1-index',
-                    KeyConditionExpression=Key('class1').eq(event['event_type']),
-                
-                    FilterExpression='event_epoch_time BETWEEN :a and :b',
-                    ExpressionAttributeValues = {
-                    ":a": from_time,
-                    ":b": to_time
-                    },
-                    ExclusiveStartKey= response['LastEvaluatedKey'] 
-                )
-                query_output_location.extend(response['Items'])
-            
-            
+            logger.info(response)
+            logger.info("After response")
             
     except Exception as e:
         print("In the exception of insert lat long")
@@ -202,15 +147,10 @@ def lambda_handler(event, context):
     
     if booln is False:
         table_data = []
-        
+        print(len(response['Items']))
+        print("After length")
         for i in scanned_output:
-            ev_id = i['event_id']['S']
-            impacted_supplier_count = 0
-            for loc_i in scanned_output_location:
-                if ev_id == loc_i['event_id']['S']:
-                    
-                    impacted_supplier_count += len(loc_i['high_impacted_supplier']['L']) + len(loc_i['medium_impacted_supplier']['L']) + len(loc_i['low_impacted_supplier']['L'])
-                    
+            
             
             table_data_dictt = {}
             table_data_location = ""
@@ -238,8 +178,8 @@ def lambda_handler(event, context):
                                   "location": table_data_location.rstrip(), 
                                   "headline": i['headline']['S'],
                                    "event_date": i['event_date']['S'][:19],
-                                   "keywords": ", ".join(key['S'].replace("'",'').lstrip().capitalize() for key in i['tags']['L']),
-                                   "impacted_suppliers": impacted_supplier_count
+                                   "keywords": ", ".join(key['S'].replace("'",'').lstrip().capitalize() for key in i['tags']['L'])
+                                  
                     })
             
                 table_data.append(table_data_dictt)
@@ -248,31 +188,22 @@ def lambda_handler(event, context):
     else:
         print(response)
         table_data = []
-        logger.info(query_output)
-        logger.info("in between")
-        logger.info(query_output_location)
         for i in query_output:
-            
-            ev_id = i['event_id']
-            impacted_supplier_count = 0
-            for loc_i in query_output_location:
-                if ev_id == loc_i['event_id']:
-                    
-                    impacted_supplier_count += len(loc_i['high_impacted_supplier']) + len(loc_i['medium_impacted_supplier']) + len(loc_i['low_impacted_supplier'])
-                    
             
             table_data_dictt = {}
             table_data_location = ""
             for j in i['impacted_locations']:
                 dictt = {}
-               
+                print(j)
+                print("After j")
                 if 'NULL' not in j['city'] and 'none' not in j['city']:
                     location = j['city']
                 elif 'NULL' not in j['state'] and 'none' not in j['state']:
                     location = j['state']
                 else:
                     location = j['Country']
-                
+                print(location)
+                print("After location")
                 if location != 'none':
                     table_data_location += location+", "
                     dictt.update({'lat':transform(j['lat_long']['lat'], 'lat'), 'lng': transform(j['lat_long']['long'], 'lng'),'Location': location,
@@ -285,7 +216,7 @@ def lambda_handler(event, context):
                                    "headline": i['headline'],
                                    "event_date": i['event_date'][:19],
                                   "location": table_data_location.rstrip(), 
-                                  "impacted_suppliers": impacted_supplier_count,
+                                  
                                   "keywords": ", ".join(key.replace("'",'').lstrip().capitalize() for key in i['tags'])
                     })
                 table_data.append(table_data_dictt)
