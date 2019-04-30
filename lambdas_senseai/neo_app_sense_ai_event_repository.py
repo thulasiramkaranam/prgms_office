@@ -1,19 +1,14 @@
-
-
-
-
 import json
 import boto3
 import logging
 import re
-import os
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 def lambda_handler(event, context):
     output = []
-    table = boto3.client('dynamodb', region_name=os.environ['table_region'])
+    table = boto3.client('dynamodb', region_name='us-east-1')
     response = table.scan(
-            TableName=os.environ['table_name'],
+            TableName='neo_app_sense_event_master',
                    
                     )
     rows = response['Items']
@@ -36,8 +31,13 @@ def lambda_handler(event, context):
             tags = 'no tags available'
         tags = tags.rstrip(",")
         table_data_location = ""
+        lat_long = []
         for j in row['impacted_locations']['L']:
-                
+            lat_long_dictt = {}
+            lat_long_dictt.update({"lat": j['M']['lat_long']['M']['lat']['S'], "lng": j['M']['lat_long']['M']['long']['S']})
+            logger.info(j)
+            logger.info("After j")
+            lat_long.append(lat_long_dictt)
             if 'NULL'  not in j['M']['city'] and 'none' not in j['M']['city']['S']:
                 location = j['M']['city']['S']
             elif 'NULL' not in j['M']['state'] and 'none' not in j['M']['state']['S']:
@@ -55,7 +55,8 @@ def lambda_handler(event, context):
                     "headline": row['headline']['S'],
                     "summary": row['summary']['S'],
                     "keywords": tags,
-                    "location": table_data_location
+                    "location": table_data_location,
+                    "lat_long": lat_long
             
             })
             output.append(dictt)
