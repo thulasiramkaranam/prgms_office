@@ -1,5 +1,6 @@
 
 
+
 import json
 import requests
 import json
@@ -13,10 +14,12 @@ def lambda_handler(event, context):
     logger.info("after event")
     
     if 'differentiator' in event and event['differentiator'] == 'message':
-        url_msg = 'http://172.16.36.156:80/message'
+        url_msg = 'http://172.17.8.82:5000/message'
+        print("in the iff")
         r = requests.post(url = url_msg, data = json.dumps(event))
+        print(r)
     else:
-        url_fetch = 'http://172.16.36.156:80/get'
+        url_fetch = 'http://172.17.8.82:5000/get'
         r = requests.post(url = url_fetch, data = json.dumps(event))
     
     return json.loads(r.text)

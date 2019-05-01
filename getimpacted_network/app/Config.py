@@ -7,8 +7,8 @@ class Local:
 
 
 class Prod:
-    graph_db_uri = 'bolt://172.16.36.117:7687'
-    graph_db_pwd = 'i-0a24fbbbfb5649282'
+    graph_db_uri = 'bolt://172.17.8.70:7687'
+    graph_db_pwd = 'i-097d2a6b8cebaad64'
 
 
 def get_config(key: str):

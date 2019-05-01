@@ -2,7 +2,7 @@
 
 import pandas as pd
 import boto3
-data = pd.read_excel(r"C:\Users\thulasiram.k\prgms_office\new_sources_toonboard.xlsx")
+data = pd.read_excel(r"C:\Users\thulasiram.k\prgms_office\EO_new_sources.xlsx")
 table = boto3.resource('dynamodb', region_name='us-east-1').Table('Neoapp_sense_crawler')
 counter = 0
 for i in range(len(data)):
