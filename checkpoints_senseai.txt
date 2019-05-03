@@ -1,0 +1,35 @@
+
+
+1) ppk file for neo4j instance in neoapps 172.16.36.117(ec2 ip) - required
+
+2) flask apis are accessable from lambda
+
+3) dynamo streams working
+
+4) postgres db created
+
+5) Able to create tables with name Neo_app_sense
+
+6) Bucket in S3 available with name sense-ai
+
+7) neo4j login is successfull and lambda is able to access data in neo4j
+
+8) mount points available
+
+9) presigned url for s3 file working
+
+10) ec2 able to access dynamo and s3
+
+11) able to write documents and issue commands to ec2 instance
+
+12) From ec2 able to send mails through sns
+
+13) Able to send mail from ec2 instance through smtp.
+
+
+
+
+
+
+
+

@@ -1,18 +1,32 @@
+
 import json
 import boto3
 import logging
 import re
+import os
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 def lambda_handler(event, context):
     output = []
-    table = boto3.client('dynamodb', region_name='us-east-1')
+    final_data = []
+    table = boto3.client('dynamodb', region_name=os.environ['table_region'])
     response = table.scan(
-            TableName='neo_app_sense_event_master',
+            TableName= os.environ['table_name'],
                    
                     )
-    rows = response['Items']
-    for row in rows:
+    #rows = response['Items']
+    final_data.extend(response['Items'])
+    logger.info(response)
+    logger.info("after response")
+    while 'LastEvaluatedKey' in response:
+        
+        response = table.scan(
+             TableName= os.environ['table_name'],
+                ExclusiveStartKey=response['LastEvaluatedKey']
+                    )
+        final_data.extend(response['Items'])
+
+    for row in final_data:
         dictt = {}
         tags = ''
         if 'tags' in row:
