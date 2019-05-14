@@ -65,6 +65,7 @@ def lambda_handler(event, context):
         from_time = int((dtt.strptime(event['from_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())
         to_time = int((dtt.strptime(event['to_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())
         scanned_output = []
+        query_output = []
         if event['event_type'].lower() == 'all':
             
             table = boto3.client('dynamodb', region_name=os.environ['table_region'])
@@ -99,7 +100,7 @@ def lambda_handler(event, context):
             
         
         else:
-            query_output = []
+            
             
             response = dynamodb_table.query(
                 IndexName='class1-index',
@@ -132,7 +133,7 @@ def lambda_handler(event, context):
         print("In the exception of insert lat long")
         print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
     output = {'markers': []}
-    if response['Count'] == 0:
+    if len(scanned_output) == 0 and len(query_output) == 0:
         dictt = {
                         "markers": [
                            
