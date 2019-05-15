@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import json
 import boto3
 import sys
@@ -52,6 +46,39 @@ def transform(data,typ):
             return lng
         else:
             return float(data)
+
+def filter_severity_table_data(event,table_data_dictt,table_data):
+    if event['severity']!='all':
+            
+        if event['severity']=='<=4':
+            if int(table_data_dictt['severity']) <= 4:
+                table_data.append(table_data_dictt)
+                
+        elif event['severity']=='4<=7':
+            if 4< int(table_data_dictt['severity']) <=7:
+                table_data.append(table_data_dictt)
+        else:
+            if  int(table_data_dictt['severity']) > 7:
+                table_data.append(table_data_dictt)
+                
+    else:
+        table_data.append(table_data_dictt)
+        
+def filter_severity_marker_data(event,dictt,output):
+    if event['severity']!='all':
+        if event['severity']=='<=4':
+            if int(dictt['severity']) <= 4:
+                output['markers'].append(dictt)
+                
+        elif event['severity']=='4<=7':
+            if 4< int(dictt['severity']) <=7:
+                output['markers'].append(dictt)
+        else:
+            if  int(dictt['severity']) > 7:
+                output['markers'].append(dictt)
+    else:
+        output['markers'].append(dictt)
+    
 
 def lambda_handler(event, context):
     # TODO implement
@@ -150,6 +177,7 @@ def lambda_handler(event, context):
         table_data = []
         print(len(response['Items']))
         print("After length")
+        logger.info(scanned_output)
         for i in scanned_output:
             
             
@@ -172,7 +200,11 @@ def lambda_handler(event, context):
                     dictt.update({'lat': transform(j['M']['lat_long']['M']['lat']['S'], 'lat'), 'lng': transform(j['M']['lat_long']['M']['long']['S'], 'lng'),
                       'Location': location, 'type': i['class1']['S'], "severity": i["severity"]['S'],'Event Id': i['event_id']['S']})
                     
-                    output['markers'].append(dictt) 
+                    logger.info("dictt", dictt)
+                    
+                    filter_severity_marker_data(event,dictt,output)
+                    
+                     
             if len(table_data_location) > 0:
                 table_data_location = table_data_location.rstrip(', ')
                 table_data_dictt.update({'Event Id': i['event_id']['S'],"summary":i["summary"]['S'], "severity": i["severity"]['S'],
@@ -182,8 +214,11 @@ def lambda_handler(event, context):
                                    "keywords": ", ".join(key['S'].replace("'",'').lstrip().capitalize() for key in i['tags']['L'])
                                   
                     })
+                    
+                filter_severity_table_data(event,table_data_dictt,table_data)
             
-                table_data.append(table_data_dictt)
+                
+                logger.info(table_data_dictt)
         output.update({'table_data': table_data})
         return output
     else:
@@ -210,7 +245,9 @@ def lambda_handler(event, context):
                     dictt.update({'lat':transform(j['lat_long']['lat'], 'lat'), 'lng': transform(j['lat_long']['long'], 'lng'),'Location': location,
                       'type': i['class1'] , "severity": i["severity"],'Event Id': i['event_id']})
                 
-                    output['markers'].append(dictt) 
+                    
+                    filter_severity_marker_data(event,dictt,output)
+                    
             if len(table_data_location) > 0:
                 table_data_location = table_data_location.rstrip(', ')
                 table_data_dictt.update({'Event Id': i['event_id'],"summary":i["summary"], "severity": i["severity"],
@@ -220,7 +257,10 @@ def lambda_handler(event, context):
                                   
                                   "keywords": ", ".join(key.replace("'",'').lstrip().capitalize() for key in i['tags'])
                     })
-                table_data.append(table_data_dictt)
+                    
+                
+                filter_severity_table_data(event,table_data_dictt,table_data)
+                    
         output.update({'table_data': table_data})
         return output
                      

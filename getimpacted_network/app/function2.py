@@ -23,6 +23,8 @@ class Function:
             return ("4", "6")
         if comparator == '>=7':
             return ("7", "9")
+        if comparator == 'all':
+            return ("0", "9")
 
 
     @staticmethod
