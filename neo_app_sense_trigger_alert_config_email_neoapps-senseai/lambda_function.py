@@ -19,6 +19,7 @@ mapping = {"Headline": "Headline of the News", "Tags": "Tags",
 def set_alert_log(df, username):
     email_data = {}
     email_data.update({"email_id": username,
+                "mailed_date": str(dtt.now())[:10],
                 "evnt_date": str(df['Event Date']).split(' ')[0],
                 "severity": str(df['Severity']) ,
                 "headline":  str(df['Headline of the News']),
@@ -101,7 +102,10 @@ def lambda_handler(event, context):
                 for i in range(0, len(df)):
                     key_word_list = []
                     stringg = "Keyword found in "
+                    comp_val_found = ""
+                    item_found = ""
                     booln = False
+                    comp_val_listt = []
                     for item in event_attributes_list:
                         item = mapping[item]
 
@@ -113,10 +117,15 @@ def lambda_handler(event, context):
                                     print("in the if conditioin")
                                     key_word_list.append(item)
                                     df['found'].iloc[i] = 'True'
-                                    stringg = comp_val + ", " + stringg + ", " + item
+                                    if comp_val not in comp_val_listt:
+                                        comp_val_found += str(comp_val) + ", "
+                                        comp_val_listt.append(comp_val)
+
+                                    item_found += str(item) + ", "
+                                    
                                     booln = True
                     if booln is True:
-
+                        stringg = comp_val_found + stringg + item_found
                         frame_message(df.iloc[i], user, stringg,email_id)
                             
                         
@@ -126,6 +135,9 @@ def lambda_handler(event, context):
                     key_word_list=[]
                     stringg = "Keyword not found in "
                     booln = False
+                    comp_val_found = ""
+                    item_found = ""
+                    comp_val_listt = []
                     for item in event_attributes_list:
                         item = mapping[item]
                         if str(df['Source'].iloc[i]) in dictt['sources']:
@@ -135,9 +147,15 @@ def lambda_handler(event, context):
 
                                     key_word_list.append(item)
                                     df['found'].iloc[i] = 'True'
-                                    stringg = comp_val + ", " + stringg + ", " + item
+                                    if comp_val not in comp_val_listt:
+                                        comp_val_found += str(comp_val) + ", "
+                                        comp_val_listt.append(comp_val)
+                                    
+                                    item_found += str(item_found) + ", "
+                                    #stringg = comp_val + ", " + stringg + ", " + item
                                     booln = True
                     if booln is True:
+                        stringg = comp_val_found + stringg + item_found
                         frame_message(df.iloc[i], user, stringg,email_id)
 
             if 'equals' in str(dictt['comparator']):
@@ -145,7 +163,9 @@ def lambda_handler(event, context):
                     key_word_list = []
                     stringg = "Keyword found in "
                     booln = False
-
+                    comp_val_found = ""
+                    item_found = ""
+                    comp_val_listt = []
                     for item in event_attributes_list:
                         item = mapping[item]
                         if str(df['Source'].iloc[i]) in dictt['sources']:
@@ -157,10 +177,16 @@ def lambda_handler(event, context):
                                     if (re.fullmatch(pattern=str(comp_val).lower(),string=str(df[item].iloc[i]).lower()) != None):
                                         key_word_list.append(item)
                                         df['found'].iloc[i] = 'True'
-                                        stringg = comp_val + ", " + stringg + ", " + item
-                                        frame_message(df.iloc[i], user, stringg,email_id)
+                                        if comp_val not in comp_val_listt:
+                                            comp_val_found += str(comp_val) + ", "
+                                            comp_val_listt.append(comp_val)
+                                        
+                                        item_found += str(item_found) + ", "
+                                        #stringg = comp_val + ", " + stringg + ", " + item
+                                        #frame_message(df.iloc[i], user, stringg,email_id)
                                         booln = True
                     if booln is True:
+                        stringg = comp_val_found + stringg + item_found
                         frame_message(df.iloc[i], user, stringg,email_id)
 
 

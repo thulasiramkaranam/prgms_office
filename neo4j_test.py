@@ -5,7 +5,7 @@ import requests
 import json
 from datetime import datetime as dtt
 query_event = '''
-    match (event:Event) return event{eventid: event.id, .event_epoch_time, .event_date}
+    match (event:Event) return event{eventid: event.id, .severity}
 '''
 
 def check_severity(comparator):
@@ -65,20 +65,14 @@ events = {"events":["EC100223","GP100308","EC100232","GP100317","EC100224",
 "DR100196","GP100321","GP100321","DR100194","DR100194","ND100288","DR100198","ND100274","EC100240","ND100271","ND100271","ND100271","EC100234","EC100234",
 "DR100200","GP100312","EC100225","ND100270","ND100275","GP100310","DR100160","ND100279"]} """
 
-if events_test['event_type'] =='all':
-    categories = json.loads((requests.get("https://w8zw2e7zk3.execute-api.us-east-1.amazonaws.com/dev/sense/filter")).text)['categories']
-else:
-    categories = [events_test['event_type']]
-    
-    
+
+ 
 
 with GraphDatabase.driver(uri, auth=("neo4j", pwd)) as driver:
     with driver.session() as session:
         
-        results = list(session.run(query, parameters={'fromtime': from_time, 'totime': to_time, 'categories': categories}))
-        
-        print(results)
-        print("after results")
+        results = list(session.run(query_event))
+        print(len(results))
         
         # for i in results:
         #     event_details = i[0]
@@ -93,6 +87,19 @@ with GraphDatabase.driver(uri, auth=("neo4j", pwd)) as driver:
         #         '''
         #     results = list(session.run(update_query, parameters={'eventID': event_id, 'epochTime': event_epoch_time }))
         #     print(results)
+        for i in results:
+            record = i[0]
+            event_id = record['eventid']
+            severity = record['severity']
+            severity = int(severity)
+            print (record)
+            update_query = '''
+                     match (e:Event {id: $eventID}) set e.event_severity = $severity return e
+                 '''
+            results = list(session.run(update_query, parameters={'eventID': event_id, 'severity': severity }))
+            
+
+
             
 
     

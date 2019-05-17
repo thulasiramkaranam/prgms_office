@@ -17,14 +17,14 @@ logger.setLevel(logging.INFO)
 class Function:
     @staticmethod
     def check_severity(comparator):
-        if comparator == '<4':
-            return ("0", "3")
-        if comparator == '4=<7':
-            return ("4", "6")
-        if comparator == '>=7':
-            return ("7", "9")
+        if comparator == '<=4':
+            return (0, 5)
+        if comparator == '4<=7':
+            return (5, 8)
+        if comparator == '>7':
+            return (8, 20)
         if comparator == 'all':
-            return ("0", "9")
+            return (0, 20)
 
 
     @staticmethod
@@ -52,7 +52,7 @@ class Function:
         query = '''
             match (event:Event)
             where event.event_epoch_time >  $fromtime and event.event_epoch_time < $totime and event.class1 in $categories
-            and event.severity >= $lb and event.severity < $ub
+            and event.event_severity >= $lb and event.event_severity < $ub
             match (event)-[imp:IMPACTS]-(entity)
 
             with collect(entity.id) as imp_entities
