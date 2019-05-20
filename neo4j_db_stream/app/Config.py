@@ -6,9 +6,14 @@ class Local:
     graph_db_pwd = 'bcone@4321'
 
 
-class Prod:
+class Dev:
     graph_db_uri = 'bolt://172.16.36.117:7687'
     graph_db_pwd = 'i-0a24fbbbfb5649282'
+
+class Prod:
+    graph_db_uri = 'bolt://172.17.8.70:7687'
+    graph_db_pwd = 'i-097d2a6b8cebaad64'
+
 
 
 def get_config(key: str):
@@ -19,5 +24,7 @@ def get_config(key: str):
         return Local.__dict__.get(key)
     elif env == 'prod':
         return Prod.__dict__.get(key)
+    elif env == 'dev':
+        return Dev.__dict__.get(key)
     else:
         return Prod.__dict__.get(key)

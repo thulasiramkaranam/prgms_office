@@ -70,6 +70,7 @@ class Function:
                 probability2 = item['probability2']['S']
                 publication_date = item['publication_date']['S']
                 severity = item['severity']['S']
+                event_severity = int(item['severity']['S'])
                 summary = item['summary']['S']
                 mtags = item['tags']['L']
                 tags = []
@@ -121,6 +122,7 @@ class Function:
                     'publication_date': publication_date,
                     'severity': severity,
                     'summary': summary,
+                    'event_severity': event_severity,
                     'tags': tags,
                     'mio_list': flat_mio_list,
                     'hio_list': flat_hio_list,
@@ -161,6 +163,7 @@ class Function:
                 event.publication_date = $publication_date,
                 event.severity = $severity,
                 event.summary = $summary,
+                event.event_severity = $event_severity,
                 event.tags = $tags
 
                 WITH event

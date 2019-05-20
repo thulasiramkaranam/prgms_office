@@ -43,8 +43,8 @@ lng:site.lat_long.x
 
 })}
     '''
-uri = "bolt://172.16.36.117:7687"
-pwd = "i-0a24fbbbfb5649282"
+uri = "bolt://172.17.8.70:7687"
+pwd = "i-097d2a6b8cebaad64"
 events_test = {"event_type":"all","from_time":"2019-02-01T06:18:25","to_time":"2019-05-13T06:18:25"}
 from_time = int((dtt.strptime(events_test['from_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())
 to_time = int((dtt.strptime(events_test['to_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())

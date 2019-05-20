@@ -235,7 +235,7 @@ def lambda_handler(event, context):
     
     if booln is False:
         table_data = []
-        
+        headlines = []
         for i in scanned_output:
             ev_id = i['event_id']['S']
             impacted_supplier_count = 0
@@ -274,8 +274,10 @@ def lambda_handler(event, context):
                                    "keywords": ", ".join(key['S'].replace("'",'').lstrip().capitalize() for key in i['tags']['L']),
                                    "impacted_suppliers": impacted_supplier_count
                     })
-            
-                filter_severity_table_data(event,table_data_dictt,table_data)
+                if i['headline']['S'] not in headlines:
+                    headlines.append(i['headline']['S'])
+                    filter_severity_table_data(event,table_data_dictt,table_data)
+                
         output.update({'table_data': table_data})
         return output
     else:
@@ -284,6 +286,7 @@ def lambda_handler(event, context):
         logger.info(query_output)
         logger.info("in between")
         logger.info(query_output_location)
+        headlines = []
         for i in query_output:
             
             ev_id = i['event_id']
@@ -321,7 +324,9 @@ def lambda_handler(event, context):
                                   "impacted_suppliers": impacted_supplier_count,
                                   "keywords": ", ".join(key.replace("'",'').lstrip().capitalize() for key in i['tags'])
                     })
-                filter_severity_table_data(event,table_data_dictt,table_data)
+                if i['headline'] not in headlines:
+                    headlines.append(i['headline'])
+                    filter_severity_table_data(event,table_data_dictt,table_data)
         output.update({'table_data': table_data})
         return output
                      
