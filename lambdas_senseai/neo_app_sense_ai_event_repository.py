@@ -67,6 +67,7 @@ def lambda_handler(event, context):
                    "event_Type": row['class2']['S'],
                    "severity": row['severity']['S'],
                     "headline": row['headline']['S'],
+                    "event_date": row['event_date']['S'],
                     "summary": row['summary']['S'],
                     "keywords": tags,
                     "location": table_data_location,

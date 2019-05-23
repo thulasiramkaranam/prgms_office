@@ -27,7 +27,7 @@ def set_alert_log(df, username):
     lambda_input = json.dumps(email_data)
     client = boto3.client('lambda')
     client.invoke_async(
-        FunctionName='neoapp_sense_add_alert_emails_db',
+        FunctionName= os.environ['lambda_async_name'],
         InvokeArgs= lambda_input
             )
     logger.info("called the lambda to insert in db ")
@@ -37,7 +37,7 @@ def frame_message(row, user, found_in,email_id):
     set_alert_log(row,email_id)
     client = boto3.client('sns', region_name = 'us-east-1')
     summary = str(row['Summary']).split(".")[0 ] +'.'
-    topic = 'arn:aws:sns:us-east-1:356832206364:SenseAlert'
+    topic = os.environ['sns_topic_url']
     subject = '''Sense.ai Event Alert | Severity ''' +str(row['Severity'] )+ ''' | ''' + str (row['Headline of the News'])
 
     msg = "Hi {},".format(user)
@@ -57,21 +57,21 @@ def lambda_handler(event, context):
     s3 = boto3.resource('s3')
 
     s3_conn = boto3.client('s3')
-    s3_result = s3_conn.list_objects(Bucket='neo-apps-procoure.ai', Prefix = 'sense_event_master_output/')
+    s3_result = s3_conn.list_objects(Bucket= os.environ['s3_bucketname'], Prefix = os.environ['s3_folder_after_curation'])
     files = s3_result['Contents']
     df = pd.DataFrame()
     for i in files:
         if '.xlsx' in i['Key'] and str(i['LastModified'].date()) == str(dtt.now().date()):
             filename = i['Key']
-            s3.Bucket('neo-apps-procoure.ai').download_file(filename, '/tmp/test.xlsx') 
+            s3.Bucket(os.environ['s3_bucketname']).download_file(filename, '/tmp/test.xlsx') 
             df = pd.read_excel('/tmp/test.xlsx')
             print("in the event master output file")
     if len(df) == 0:
-        filename = 'sense_ds_input/sense_output/' + str(dtt.now())[:10]+"refresh.xlsx"
+        filename = os.environ['s3_folder_before_curation'] + str(dtt.now())[:10]+"refresh.xlsx"
         print("Taking before manual curation file")
         #s3.Bucket('neo-apps-procoure.ai').download_file(filename, r'C:\Users\thulasiram.k\prgms_office\s3.xlsx')
     
-        s3.Bucket('neo-apps-procoure.ai').download_file(filename, '/tmp/test.xlsx') 
+        s3.Bucket(os.environ['s3_bucketname']).download_file(filename, '/tmp/test.xlsx') 
         df = pd.read_excel('/tmp/test.xlsx')
         #df = pd.read_excel(r"C:\Users\thulasiram.k\prgms_office\s3.xlsx")
     

@@ -2,7 +2,7 @@
 
 import pandas as pd
 import boto3
-data = pd.read_excel(r"C:\Users\thulasiram.k\prgms_office\EO_new_sources.xlsx")
+data = pd.read_excel(r"C:\Users\thulasiram.k\prgms_office\sprint7_sources.xlsx")
 table = boto3.resource('dynamodb', region_name='us-east-1').Table('Neoapp_sense_crawler')
 counter = 0
 for i in range(len(data)):
@@ -13,7 +13,7 @@ for i in range(len(data)):
     table_key.update({'Website': str(df_row['sources'].strip())})
  
     dictt.update({"project_code": df_row['projectcode'], "project_name": "Generic Test",
-             "requestor": "vaibhav", "Scrapable": True, "frequency": "24"} )
+             "requestor": "vaibhav_sprint7", "Scrapable": True, "frequency": "24"} )
     update_exp = ""
     exp_attribute_values = {}
     for key, value in dictt.items():
