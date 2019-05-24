@@ -8,8 +8,7 @@ from OpenSSL import SSL
 import json
 import uuid
 context = SSL.Context(SSL.SSLv23_METHOD)
-cer = '/home/ec2-user/udara.com.crt'
-key = '/home/ec2-user/udara.com.key'
+
 
 import psycopg2
 import ssl
@@ -200,5 +199,5 @@ def testing():
     return cd
 
 if __name__ == '__main__':
-    context = (cer, key)
+    
     app.run(host = '172.16.36.156', port = 80, debug=True)

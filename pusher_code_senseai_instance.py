@@ -1,13 +1,17 @@
 
 
 
-
-
 from flask import Flask, render_template, request
 from pusher import Pusher
 from flask_cors import CORS
+from OpenSSL import SSL
 import json
+import uuid
+context = SSL.Context(SSL.SSLv23_METHOD)
+
+
 import psycopg2
+import ssl
 import uuid
 import sys
 import datetime
@@ -27,9 +31,9 @@ def fetch_postgres_db_session():
     try:
         global conn
         if conn is None:
-            db_name = 'neo-app-sense'
+            db_name = 'senseai'
             db_user = 'neo_app_sense_root'
-            db_host = 'neo-app-sense.c5appvbypuuj.us-east-1.rds.amazonaws.com'
+            db_host = 'neo-app-sense1.c5appvbypuuj.us-east-1.rds.amazonaws.com'
             db_pass = 'nkaFwT6v'
             conn = psycopg2.connect("dbname='%s' user='%s' host='%s' password='%s'" % (db_name, db_user, db_host, db_pass))
             print("returned the conn")
@@ -51,22 +55,38 @@ def dashboard():
 def order():
     
     return "units logged"
+def update_read_status(input_object):
+    pg_obj = fetch_postgres_db_session()
+    cursor_obj = pg_obj.cursor()
+    insrt_update_query = "INSERT INTO senseai_chat_read_log VALUES(%s,%s,%s) on conflict (event_id, email) do update set uuid = %s"
+    event_id = input_object['event_id']
+    email_id = input_object['email_id']
+    msg_id = input_object['msg_id']
+    cursor_obj.execute(insrt_update_query, (event_id,email_id,msg_id, (msg_id,)))
+    pg_obj.commit()
+    cursor_obj.close()
+
 
 def insert_update_chat_db(chat_data,insrt_update):
     print(insrt_update)
     print(chat_data)
     dictt = {}
+    uuid_insert_update = str(uuid.uuid4())
     dictt.update({"message": chat_data['message'], 'type': 'human', 
             'Channelname': chat_data['Channelname'],
                 'Eventname': chat_data['Channelname']+'event',
                     'displayName':chat_data['displayName'],
                     'email': chat_data['email'],
+                    'uuid': uuid_insert_update,
                     'createdAt': str(dtt.now()) })
+    input_object = {"event_id": chat_data['Channelname'], "email_id": chat_data['email'], "msg_id": uuid_insert_update}
+    update_read_status(input_object)
     if insrt_update == 'insert':
 
         insrt_query = """ INSERT INTO senseai_chat_app (channel_name, historical_chat) VALUES (%s,%s)"""
         pg_obj_insrt = fetch_postgres_db_session()
         cursor_insrt = pg_obj_insrt.cursor()
+        
         insrt_data = [dictt]
         insrt_data = json.dumps(insrt_data)
         print(insrt_data)
@@ -83,6 +103,7 @@ def insert_update_chat_db(chat_data,insrt_update):
         dictt.update({"message": chat_data['message'], 'type': 'human', 
             'Channelname': chat_data['Channelname'],
                 'Eventname': chat_data['Channelname']+'event',
+                    'uuid': uuid_insert_update,
                     'displayName':chat_data['displayName'],
                     'email': chat_data['email'],
                     'createdAt': str(dtt.now()) })
@@ -91,6 +112,7 @@ def insert_update_chat_db(chat_data,insrt_update):
         cursor_update.execute(update_query, (update_data,chnl_name))
         pg_obj_update.commit()
         cursor_update.close()
+    return uuid_insert_update
 
     
 
@@ -130,18 +152,17 @@ def message():
     print(data)
     print("After data message")
     data = json.loads(data)
-    eject_data = {"message": data["message"], "email": data["email"],"displayName":data['displayName'],"eventID":data['eventID'], "createdAt": str(dtt.now())}
-    eject_data = json.dumps(eject_data)
     print("ahsaj", data)
     table_data = check_channel(data['Channelname'])
     if table_data == 'No Historical chat available':
-        insert_update_chat_db(data, 'insert')
+        uid = insert_update_chat_db(data, 'insert')
     else:
-        insert_update_chat_db(data, 'update')
-
-
+        uid = insert_update_chat_db(data, 'update')
+    eject_data = {"message": data["message"], "email": data["email"],"displayName":data['displayName'],"eventID":data['eventID'], "createdAt": str(dtt.now())}
+  
     pusher.trigger(data['Channelname'],data['Channelname']+'event', eject_data)
-    
+    eject_data.update({"uuid": uid})
+    eject_data = json.dumps(eject_data)
     return eject_data
 
 @app.route('/customer', methods=['POST'])
@@ -171,11 +192,12 @@ def testing():
             "displayName":data['displayName']
                 }
     cd = json.dumps(chat)
-    pusher.trigger(data['Channelname'],data['Channelname']+'event', chat )
+    pusher.trigger(data['channelName'],data['channelName']+'event', chat )
     print(data)
     print("called get api")
     
     return cd
 
 if __name__ == '__main__':
-    app.run(host = '172.16.36.156', port = 80, debug=True)
+    
+    app.run(host = '172.17.8.82', port = 80, debug=True)
