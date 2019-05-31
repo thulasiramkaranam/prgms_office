@@ -33,6 +33,8 @@ def set_alert_log(df, username):
     logger.info("called the lambda to insert in db ")
 
 
+
+
 def frame_message(row, user, found_in,email_id):
     set_alert_log(row,email_id)
     client = boto3.client('sns', region_name = 'us-east-1')

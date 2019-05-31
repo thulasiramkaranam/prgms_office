@@ -12,7 +12,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 mapping = {"Headline": "Headline of the News", "Tags": "Tags",
            "Summary": "Summary", "Class": "Class Level1", "SubClass": "Class Level2",
-           "Location": "Impacted_locations" }
+           "Location": "Impacted_locations" , "Content": "Content of the News"}
 
 
 
@@ -31,6 +31,62 @@ def set_alert_log(df, username):
         InvokeArgs= lambda_input
             )
     logger.info("called the lambda to insert in db ")
+
+def forums_frame_message(row, user, found_in,email_id):
+    set_alert_log(row,email_id)
+    client = boto3.client('sns', region_name = 'us-east-1')
+    contents_list = row['Content of the News'].split("|")
+    summary = str(row['Summary']).split(".")[0 ] +'.'
+    topic = os.environ['sns_topic_url']
+    subject = '''Sense.ai Event Alert | Severity ''' +str(row['Severity'] )+ ''' | ''' + str (row['Headline of the News'])
+
+    msg = "Hi {},".format(user)
+    msg = msg + '''\n\nEvent Type\n''' +str(row['Class Level1'] ) +", " +str(row['Class Level2'])
+
+    msg = msg+ '''\n\nSummary\n ''' +str(row['Headline of the News']) + " : " + summary
+    msg = msg + '''\n\n '''+ found_in
+    msg = msg + '''\n\n ''' + "Topic Discussed :" + contents_list[1].strip()
+    msg = msg + '''\n ''' + "Number of views :" + contents_list[2].strip()
+    msg = msg + '''\n ''' + "Number of comments :" + contents_list[3].strip()
+    msg = msg + '''\n ''' + "Sentiment :" + contents_list[0].strip()
+
+
+    response = client.publish(TopicArn=topic ,Message=msg ,Subject=subject[0:100])
+    print("mail sent")
+
+
+def forums_mails_frame(row, comparasion_values, column_values, user, email_id):
+    column_values.append("Content")
+    stringg = "Keyword found in "
+    comp_val_found = ""
+    item_found = ""
+    booln = False
+    comp_val_listt = []
+    item_found_listt = []
+    key_word_list = []
+    for item in column_values:
+        item = mapping[item]
+        
+        for comp_val in comparasion_values:
+
+            if (str(comp_val).lower()) in str(row[item]).lower():
+                print("in the if conditioin")
+                key_word_list.append(item)
+                
+                if comp_val not in comp_val_listt:
+                    comp_val_found += str(comp_val) + ", "
+                    comp_val_listt.append(comp_val)
+                if item not in item_found_listt:
+                    item_found += str(item) + ", "
+                    item_found_listt.append(item)
+                print("forums comparasion satisfied")
+                booln = True
+    if booln is True:
+        print(item_found)
+        print("after item found")
+        stringg = comp_val_found + stringg + item_found
+        forums_frame_message(row, user, stringg, email_id)
+            
 
 
 def frame_message(row, user, found_in,email_id):
@@ -106,28 +162,35 @@ def lambda_handler(event, context):
                     item_found = ""
                     booln = False
                     comp_val_listt = []
-                    for item in event_attributes_list:
-                        item = mapping[item]
+                    if 'https://forums.edmunds.com/discussions/tagged/x/repairs-maintenance' in str(df              ['Source'].iloc[i]):
+                        print("in the forums if condition satisfied")
+                        forums_mails_frame(df.iloc[i], comparison_values_list, event_attributes_list, user, email_id )
 
-                        if str(df['Source'].iloc[i]) in dictt['sources']:
+                        
 
-                            for comp_val in comparison_values_list:
+                    else:
+                        for item in event_attributes_list:
+                            item = mapping[item]
 
-                                if (str(comp_val).lower()) in str(df[item].iloc[i]).lower():
-                                    print("in the if conditioin")
-                                    key_word_list.append(item)
-                                    df['found'].iloc[i] = 'True'
-                                    if comp_val not in comp_val_listt:
-                                        comp_val_found += str(comp_val) + ", "
-                                        comp_val_listt.append(comp_val)
+                            if str(df['Source'].iloc[i]) in dictt['sources']:
 
-                                    item_found += str(item) + ", "
-                                    
-                                    booln = True
-                    if booln is True:
-                        stringg = comp_val_found + stringg + item_found
-                        frame_message(df.iloc[i], user, stringg,email_id)
-                            
+                                for comp_val in comparison_values_list:
+
+                                    if (str(comp_val).lower()) in str(df[item].iloc[i]).lower():
+                                        print("in the if conditioin")
+                                        key_word_list.append(item)
+                                        df['found'].iloc[i] = 'True'
+                                        if comp_val not in comp_val_listt:
+                                            comp_val_found += str(comp_val) + ", "
+                                            comp_val_listt.append(comp_val)
+
+                                        item_found += str(item) + ", "
+                                        
+                                        booln = True
+                        if booln is True:
+                            stringg = comp_val_found + stringg + item_found
+                            frame_message(df.iloc[i], user, stringg,email_id)
+                                
                         
             if 'not_contains' in str(dictt['comparator']) or 'not_equals' in str(dictt['comparator']):
 
