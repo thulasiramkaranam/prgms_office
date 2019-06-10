@@ -54,6 +54,7 @@ class Function:
                 entities_impacted = item['entities_impacted']['N']
                 epoch_time = item['epoch_time']['N']
                 event_date = datetime.strptime(item['event_date']['S'], '%Y-%m-%d %H:%M:%S').strftime("%Y-%m-%d")
+                event_epoch_time = int((datetime.strptime(item['event_date']['S'], "%Y-%m-%d %H:%M:%S")     -datetime(1970,1,1)).total_seconds())
                 feature = item['feature']['S']
                 headline = item['headline']['S']
                 high_impacted_dc = item['high_impacted_dc']['L']
@@ -118,6 +119,7 @@ class Function:
                     'feature': feature,
                     'headline': headline,
                     'probability1': probability1,
+                    'event_epoch_time': event_epoch_time,
                     'probability2': probability2,
                     'publication_date': publication_date,
                     'severity': severity,
@@ -160,6 +162,7 @@ class Function:
                 event.headline = $headline,
                 event.probability1 = $probability1,
                 event.probability2 = $probability2,
+                event.event_epoch_time = $event_epoch_time,
                 event.publication_date = $publication_date,
                 event.severity = $severity,
                 event.summary = $summary,

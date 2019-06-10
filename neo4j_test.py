@@ -5,7 +5,7 @@ import requests
 import json
 from datetime import datetime as dtt
 query_event = '''
-    match (event:Event) return event{eventid: event.id, .severity}
+    match (event:Event) return event{eventid: event.id, .event_date}
 '''
 
 def check_severity(comparator):
@@ -43,8 +43,8 @@ lng:site.lat_long.x
 
 })}
     '''
-uri = "bolt://172.17.8.70:7687"
-pwd = "i-097d2a6b8cebaad64"
+uri = "bolt://172.16.36.117:7687"
+pwd = "i-0a24fbbbfb5649282"
 events_test = {"event_type":"all","from_time":"2019-02-01T06:18:25","to_time":"2019-05-13T06:18:25"}
 from_time = int((dtt.strptime(events_test['from_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())
 to_time = int((dtt.strptime(events_test['to_time'], "%Y-%m-%dT%H:%M:%S")-datetime.datetime(1970,1,1)).total_seconds())
@@ -74,19 +74,23 @@ with GraphDatabase.driver(uri, auth=("neo4j", pwd)) as driver:
         results = list(session.run(query_event))
         print(len(results))
         
-        # for i in results:
-        #     event_details = i[0]
-        #     print(event_details)
-        #     event_id = event_details['id']
-        #     epoch_time = str(event_details['event_date'])
-        #     event_epoch_time = int((dtt.strptime(epoch_time, "%Y-%m-%d")-datetime.datetime(1970,1,1)).total_seconds())
-        #     print(event_epoch_time)
+        for i in results:
+            event_details = i[0]
+            print(event_details)
+            event_id = event_details['eventid']
+            epoch_time = str(event_details['event_date'])
+            event_epoch_time = int((dtt.strptime(epoch_time, "%Y-%m-%d")-datetime.datetime(1970,1,1)).total_seconds())
+            print(event_epoch_time)
             
-        #     update_query = '''
-        #             match (e:Event {id: $eventID}) set e.event_epoch_time = $epochTime return e
-        #         '''
-        #     results = list(session.run(update_query, parameters={'eventID': event_id, 'epochTime': event_epoch_time }))
-        #     print(results)
+            update_query = '''
+                    match (e:Event {id: $eventID}) set e.event_epoch_time = $epochTime return e
+                '''
+            results = list(session.run(update_query, parameters={'eventID': event_id, 'epochTime': event_epoch_time }))
+            print(results)
+
+        """
+
+
         for i in results:
             record = i[0]
             event_id = record['eventid']
@@ -97,6 +101,8 @@ with GraphDatabase.driver(uri, auth=("neo4j", pwd)) as driver:
                      match (e:Event {id: $eventID}) set e.event_severity = $severity return e
                  '''
             results = list(session.run(update_query, parameters={'eventID': event_id, 'severity': severity }))
+
+        """
             
 
 

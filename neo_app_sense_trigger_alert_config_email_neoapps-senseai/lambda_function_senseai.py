@@ -6,6 +6,7 @@ import pandas as pd
 import datetime
 import re
 import json
+from botocore.exceptions import ClientError
 from datetime import datetime as dtt
 #import psycopg2
 logger = logging.getLogger()
@@ -33,8 +34,6 @@ def set_alert_log(df, username):
     logger.info("called the lambda to insert in db ")
 
 
-
-
 def frame_message(row, user, found_in,email_id):
     set_alert_log(row,email_id)
     client = boto3.client('sns', region_name = 'us-east-1')
@@ -48,8 +47,49 @@ def frame_message(row, user, found_in,email_id):
     msg = msg+ '''\n\nSummary\n ''' +str(row['Headline of the News']) + " : " + summary
 
     msg = msg + '''\n\n '''+ found_in
+        
+    BODY_TEXT = msg
+    SENDER = 'senseai-alert@bcone.com'          
+    AWS_REGION = "us-east-1"     
+    
+    # The character encoding for the email.
+    CHARSET = "UTF-8"
+    
+    # Create a new SES resource and specify a region.
+    client_ses = boto3.client('ses',region_name=AWS_REGION)
+    
+    # Try to send the email.
+    try:
+        #Provide the contents of the email.
+        response = client_ses.send_email(
+            Destination={
+                'ToAddresses': [
+                    email_id,
+                ],
+            },
+            Message={
+                'Body': {
+                    
+                    'Text': {
+                        'Charset': CHARSET,
+                        'Data': BODY_TEXT,
+                    },
+                },
+                'Subject': {
+                    'Charset': CHARSET,
+                    'Data': subject,
+                },
+            },
+            Source=SENDER
+            # If you are not using a configuration set, comment or delete the
+            # following line
+            
+        )
+    	
+    except ClientError as e:
+        print(e.response['Error']['Message'])
 
-    response = client.publish(TopicArn=topic ,Message=msg ,Subject=subject[0:100])
+    #response = client.publish(TopicArn=topic ,Message=msg ,Subject=subject[0:100])
     print("mail sent")
 
 
