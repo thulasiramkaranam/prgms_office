@@ -1,0 +1,1013 @@
+
+[
+    {
+        "created_at": "Thu Jun 13 19:42:29 +0000 2019",
+        "id": 1139256748542439400,
+        "id_str": "1139256748542439425",
+        "text": "@YukiSenmatsu Ack, ack, ack!",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "YukiSenmatsu",
+                    "name": "Ｙｕｋｉ @ Commissions Open",
+                    "id": 1512482582,
+                    "id_str": "1512482582",
+                    "indices": [
+                        0,
+                        13
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1138903730017845200,
+        "in_reply_to_status_id_str": "1138903730017845249",
+        "in_reply_to_user_id": 1512482582,
+        "in_reply_to_user_id_str": "1512482582",
+        "in_reply_to_screen_name": "YukiSenmatsu",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 19:41:13 +0000 2019",
+        "id": 1139256427044843500,
+        "id_str": "1139256427044843523",
+        "text": "@MrDoom8000 Did you make it to the demo? 👀",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "MrDoom8000",
+                    "name": "Mr. Doom mooD .rM",
+                    "id": 2797170769,
+                    "id_str": "2797170769",
+                    "indices": [
+                        0,
+                        11
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1138900444649054200,
+        "in_reply_to_status_id_str": "1138900444649054210",
+        "in_reply_to_user_id": 2797170769,
+        "in_reply_to_user_id_str": "2797170769",
+        "in_reply_to_screen_name": "MrDoom8000",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 19:40:25 +0000 2019",
+        "id": 1139256225428922400,
+        "id_str": "1139256225428922370",
+        "text": "@j3nnard Trying to write without them would be pretty pointless.",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "j3nnard",
+                    "name": "𝑂𝑟𝑎𝑛𝑔𝑒 𝑙𝑎𝑣𝑎𝑏𝑢𝑟𝑠𝑡",
+                    "id": 35941542,
+                    "id_str": "35941542",
+                    "indices": [
+                        0,
+                        8
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1138897492962156500,
+        "in_reply_to_status_id_str": "1138897492962156545",
+        "in_reply_to_user_id": 35941542,
+        "in_reply_to_user_id_str": "35941542",
+        "in_reply_to_screen_name": "j3nnard",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 19:38:29 +0000 2019",
+        "id": 1139255742031175700,
+        "id_str": "1139255742031175682",
+        "text": "@LaTeeshaMannin1 Kids do the darnedest (and cutest) things.",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "LaTeeshaMannin1",
+                    "name": "IG @chantay1186",
+                    "id": 4443610934,
+                    "id_str": "4443610934",
+                    "indices": [
+                        0,
+                        16
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1138896419161403400,
+        "in_reply_to_status_id_str": "1138896419161403392",
+        "in_reply_to_user_id": 4443610934,
+        "in_reply_to_user_id_str": "4443610934",
+        "in_reply_to_screen_name": "LaTeeshaMannin1",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 18:42:13 +0000 2019",
+        "id": 1139241582178254800,
+        "id_str": "1139241582178254848",
+        "text": "@tvandfilmguy Thanks for sharing! We'll give your gratitude to the store.",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "tvandfilmguy",
+                    "name": "Josh Lasser, Buy His Manuscript",
+                    "id": 255631017,
+                    "id_str": "255631017",
+                    "indices": [
+                        0,
+                        13
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1139230190989697000,
+        "in_reply_to_status_id_str": "1139230190989697024",
+        "in_reply_to_user_id": 255631017,
+        "in_reply_to_user_id_str": "255631017",
+        "in_reply_to_screen_name": "tvandfilmguy",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 17:13:34 +0000 2019",
+        "id": 1139219271161208800,
+        "id_str": "1139219271161208834",
+        "text": "@asuncionx Did you pre-order in preparation for July?",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "asuncionx",
+                    "name": "rafael asuncionXD",
+                    "id": 589497583,
+                    "id_str": "589497583",
+                    "indices": [
+                        0,
+                        10
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1139215819869700100,
+        "in_reply_to_status_id_str": "1139215819869700098",
+        "in_reply_to_user_id": 589497583,
+        "in_reply_to_user_id_str": "589497583",
+        "in_reply_to_screen_name": "asuncionx",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 16:54:14 +0000 2019",
+        "id": 1139214407484026900,
+        "id_str": "1139214407484026880",
+        "text": "@marissa_burhans What can we say? We have a soft spot for bass drops.",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "marissa_burhans",
+                    "name": "marissa burhans",
+                    "id": 1472603580,
+                    "id_str": "1472603580",
+                    "indices": [
+                        0,
+                        16
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1139202700917248000,
+        "in_reply_to_status_id_str": "1139202700917248000",
+        "in_reply_to_user_id": 1472603580,
+        "in_reply_to_user_id_str": "1472603580",
+        "in_reply_to_screen_name": "marissa_burhans",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 2,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 16:49:51 +0000 2019",
+        "id": 1139213300955263000,
+        "id_str": "1139213300955262976",
+        "text": "@asuncionx How pumped are you after demoing the game?",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "asuncionx",
+                    "name": "rafael asuncionXD",
+                    "id": 589497583,
+                    "id_str": "589497583",
+                    "indices": [
+                        0,
+                        10
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1138964981637099500,
+        "in_reply_to_status_id_str": "1138964981637099520",
+        "in_reply_to_user_id": 589497583,
+        "in_reply_to_user_id_str": "589497583",
+        "in_reply_to_screen_name": "asuncionx",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 16:48:51 +0000 2019",
+        "id": 1139213049078911000,
+        "id_str": "1139213049078910976",
+        "text": "@SantiagoOrville Jason Voorhees approves this message.",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "SantiagoOrville",
+                    "name": "🎬🍿Orville Santiago🎸🤘🏻",
+                    "id": 461281677,
+                    "id_str": "461281677",
+                    "indices": [
+                        0,
+                        16
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1138968400301109200,
+        "in_reply_to_status_id_str": "1138968400301109248",
+        "in_reply_to_user_id": 461281677,
+        "in_reply_to_user_id_str": "461281677",
+        "in_reply_to_screen_name": "SantiagoOrville",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 1,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Jun 13 16:39:34 +0000 2019",
+        "id": 1139210715150135300,
+        "id_str": "1139210715150135301",
+        "text": "@JackyClikkie Does this make us bud-dies or nah?",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "JackyClikkie",
+                    "name": "jackyjacky (stream truce)",
+                    "id": 1032990711640088600,
+                    "id_str": "1032990711640088576",
+                    "indices": [
+                        0,
+                        13
+                    ]
+                }
+            ],
+            "urls": []
+        },
+        "source": "<a href=\"https://www.spredfast.com/\" rel=\"nofollow\">Spredfast app</a>",
+        "in_reply_to_status_id": 1138971849260331000,
+        "in_reply_to_status_id_str": "1138971849260331008",
+        "in_reply_to_user_id": 1032990711640088600,
+        "in_reply_to_user_id_str": "1032990711640088576",
+        "in_reply_to_screen_name": "JackyClikkie",
+        "user": {
+            "id": 17475575,
+            "id_str": "17475575",
+            "name": "Best Buy",
+            "screen_name": "BestBuy",
+            "location": "Richfield, MN",
+            "description": "Let’s talk about what’s possible. Share your best tech with the world using @BestBuy.   Contact @BestBuySupport with customer service questions.",
+            "url": "http://t.co/FZzHkTT5uT",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://t.co/FZzHkTT5uT",
+                            "expanded_url": "http://www.BestBuy.com",
+                            "display_url": "BestBuy.com",
+                            "indices": [
+                                0,
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 902000,
+            "friends_count": 87,
+            "listed_count": 6323,
+            "created_at": "Wed Nov 19 00:23:16 +0000 2008",
+            "favourites_count": 26329,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 45643,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "FAFAFA",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/994249554525499392/-FXXe19c_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/17475575/1548804124",
+            "profile_link_color": "1646A8",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    }
+]
